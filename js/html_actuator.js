@@ -20,6 +20,13 @@ function HTMLActuator() {
   this.hardBadge = document.querySelector(".hard-badge");
   this.timeBadge = document.querySelector(".time-badge");
 
+  // Stats UI references (optional if markup missing)
+  this.statsPanel = document.querySelector(".stats-panel");
+  this.statsMovesEl = document.querySelector(".stats-moves");
+  this.statsHighestEl = document.querySelector(".stats-highest");
+  this.statsMergeListEl = document.querySelector(".stats-merge-list");
+  this.statsResetButton = document.querySelector(".stats-reset-button");
+
   this.score = 0;
 
   // Track DOM elements by tile id so we can animate movement smoothly
@@ -30,6 +37,19 @@ function HTMLActuator() {
 
   // Label elements on score panels (created once)
   this._bestLabelEl = null;
+
+  // Cache for stats rendering to avoid unnecessary DOM updates
+  this._lastStatsHash = "";
+  this._mergeItemEls = Object.create(null);
+
+  // Wire reset stats button to input manager via a DOM event.
+  // KeyboardInputManager listens for this event and forwards to GameManager.
+  if (this.statsResetButton) {
+    this.statsResetButton.addEventListener("click", function () {
+      var ev = new window.CustomEvent("resetStats");
+      window.dispatchEvent(ev);
+    });
+  }
 }
 
 /**
@@ -63,6 +83,108 @@ HTMLActuator.prototype.formatTime = function (ms) {
   var minutes = Math.floor(totalSeconds / 60);
   var seconds = totalSeconds % 60;
   return minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
+};
+
+HTMLActuator.prototype._hashStats = function (stats) {
+  if (!stats) return "";
+  // Stable hash for quick equality check; keys are numeric tile values stored as strings.
+  var mergeKeys = (stats.mergeCounts && typeof stats.mergeCounts === "object")
+    ? Object.keys(stats.mergeCounts).sort(function (a, b) { return parseInt(a, 10) - parseInt(b, 10); })
+    : [];
+  var parts = ["m=" + (stats.moves || 0), "h=" + (stats.highestTile || 0)];
+  for (var i = 0; i < mergeKeys.length; i++) {
+    var k = mergeKeys[i];
+    parts.push(k + ":" + (stats.mergeCounts[k] || 0));
+  }
+  return parts.join("|");
+};
+
+HTMLActuator.prototype.renderStats = function (stats) {
+  if (!this.statsPanel) return;
+
+  stats = stats || { moves: 0, highestTile: 0, mergeCounts: {} };
+
+  var hash = this._hashStats(stats);
+  if (hash === this._lastStatsHash) return;
+  this._lastStatsHash = hash;
+
+  if (this.statsMovesEl) this.statsMovesEl.textContent = String(stats.moves || 0);
+  if (this.statsHighestEl) this.statsHighestEl.textContent = String(stats.highestTile || 0);
+
+  if (!this.statsMergeListEl) return;
+
+  var mergeCounts = stats.mergeCounts || {};
+  var keys = Object.keys(mergeCounts)
+    .filter(function (k) { return (mergeCounts[k] || 0) > 0; })
+    .sort(function (a, b) { return parseInt(a, 10) - parseInt(b, 10); });
+
+  // Track which list items remain active after render.
+  var active = Object.create(null);
+
+  for (var i = 0; i < keys.length; i++) {
+    var value = keys[i];
+    var count = mergeCounts[value] || 0;
+    var li = this._mergeItemEls[value];
+
+    if (!li) {
+      li = document.createElement("li");
+      li.className = "stats-merge-item";
+      li.setAttribute("aria-label", "Merged into " + value + " tile " + count + " times");
+      li.dataset.tileValue = value;
+
+      var label = document.createElement("span");
+      label.className = "stats-merge-value";
+      label.textContent = value;
+
+      var cnt = document.createElement("span");
+      cnt.className = "stats-merge-count";
+      cnt.textContent = String(count);
+
+      li.appendChild(label);
+      li.appendChild(cnt);
+
+      this._mergeItemEls[value] = li;
+    } else {
+      // Update count & aria label only if changed.
+      var countEl = li.querySelector(".stats-merge-count");
+      if (countEl && countEl.textContent !== String(count)) {
+        countEl.textContent = String(count);
+      }
+      li.setAttribute("aria-label", "Merged into " + value + " tile " + count + " times");
+    }
+
+    active[value] = true;
+  }
+
+  // Remove stale items from DOM and cache
+  Object.keys(this._mergeItemEls).forEach(function (value) {
+    if (!active[value]) {
+      var el = this._mergeItemEls[value];
+      if (el && el.parentNode) el.parentNode.removeChild(el);
+      delete this._mergeItemEls[value];
+    }
+  }, this);
+
+  // Append in correct order (move existing nodes as needed).
+  for (var j = 0; j < keys.length; j++) {
+    var v = keys[j];
+    this.statsMergeListEl.appendChild(this._mergeItemEls[v]);
+  }
+
+  // Empty state
+  if (keys.length === 0) {
+    // Keep a single lightweight placeholder node.
+    if (!this._emptyMergeEl) {
+      var empty = document.createElement("li");
+      empty.className = "stats-merge-empty";
+      empty.textContent = "No merges yet";
+      empty.setAttribute("aria-label", "No merges yet");
+      this._emptyMergeEl = empty;
+    }
+    this.statsMergeListEl.appendChild(this._emptyMergeEl);
+  } else if (this._emptyMergeEl && this._emptyMergeEl.parentNode) {
+    this._emptyMergeEl.parentNode.removeChild(this._emptyMergeEl);
+  }
 };
 
 /**
@@ -217,6 +339,13 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
         delete self.tiles[id];
       }
     });
+
+    // Stats panel (render after tiles are updated; does not affect tile animation sequencing)
+    if (metadata && metadata.stats) {
+      self.renderStats(metadata.stats);
+    } else {
+      self.renderStats({ moves: 0, highestTile: 0, mergeCounts: {} });
+    }
 
     self.updateScore(metadata.score);
     self.updateBestScore(metadata.bestScore);

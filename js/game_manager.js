@@ -32,9 +32,16 @@ function GameManager(size, InputManager, Actuator, StorageManager, options) {
     intervalId: null
   };
 
+  // Stats runtime state (moves, highest tile, per-value merge counts)
+  // Persisted per mode/size namespace via LocalStorageManager.
+  this.stats = this.storageManager.getStats();
+
   this.inputManager.on("move", this.move.bind(this));
   this.inputManager.on("restart", this.restart.bind(this));
   this.inputManager.on("keepPlaying", this.keepPlaying.bind(this));
+
+  // Stats-only reset (does not affect best score or current grid)
+  this.inputManager.on("resetStats", this.handleResetStats.bind(this));
 
   this.setup();
 }
@@ -43,14 +50,27 @@ function GameManager(size, InputManager, Actuator, StorageManager, options) {
 GameManager.prototype.restart = function () {
   this.stopTimer();
   this.storageManager.clearGameState();
+
+  // Reset current-run stats (does not touch best score).
+  this.resetStats();
+
   this.actuator.continueGame(); // Clear the game won/lost message
   this.setup();
 };
 
-// Keep playing after winning (allows going over 2048)
 GameManager.prototype.keepPlaying = function () {
   this.keepPlaying = true;
   this.actuator.continueGame(); // Clear the game won/lost message
+};
+
+// PUBLIC_INTERFACE
+GameManager.prototype.handleResetStats = function () {
+  /** Reset current-run stats without affecting score, best score, or game state. */
+  this.resetStats();
+  // Highest tile should reflect current grid right after reset.
+  this.updateHighestTileFromGrid();
+  this.storageManager.setStats(this.stats);
+  this.actuate();
 };
 
 // Return true if the game is lost, or has won and the user hasn't kept playing, or time-attack ended
@@ -82,6 +102,9 @@ GameManager.prototype.setup = function () {
       this.timeAttack.remainingMs = this.mode.timeLimitMs;
       this.timeAttack.ended = false;
     }
+
+    // Restore current-run stats for this namespace.
+    this.stats = this.storageManager.getStats();
   } else {
     this.grid = new Grid(this.size);
     this.score = 0;
@@ -94,9 +117,15 @@ GameManager.prototype.setup = function () {
       this.timeAttack.ended = false;
     }
 
+    // New run => fresh stats
+    this.resetStats();
+
     // Add the initial tiles
     this.addStartTiles();
   }
+
+  // Ensure highest tile reflects current grid after load / initialization.
+  this.updateHighestTileFromGrid();
 
   // Start timer if needed and game not ended
   if (this.mode.timeAttack && !this.timeAttack.ended) {
@@ -166,6 +195,9 @@ GameManager.prototype.actuate = function () {
     bestScore: this.getBestScoreForCurrentMode(),
     terminated: this.isGameTerminated(),
 
+    // Stats metadata for UI (current-run only)
+    stats: this.stats,
+
     // Mode metadata for UI
     mode: {
       size: this.size,
@@ -233,6 +265,40 @@ GameManager.prototype.endTimeAttack = function () {
   this.actuate();
 };
 
+// PUBLIC_INTERFACE
+GameManager.prototype.resetStats = function () {
+  /** Reset current-run stats for this namespace (moves, highest tile, merge counts). */
+  this.stats = { moves: 0, highestTile: 0, mergeCounts: {} };
+  this.storageManager.setStats(this.stats);
+};
+
+// PUBLIC_INTERFACE
+GameManager.prototype.updateHighestTileFromGrid = function () {
+  /** Recompute highest tile from current grid and persist if it increases. */
+  var maxVal = 0;
+  this.grid.eachCell(function (x, y, tile) {
+    if (tile && tile.value > maxVal) maxVal = tile.value;
+  });
+  if (maxVal > (this.stats.highestTile || 0)) {
+    this.stats.highestTile = maxVal;
+    this.storageManager.setStats(this.stats);
+  }
+};
+
+GameManager.prototype.incrementMoveStat = function () {
+  this.stats.moves = (this.stats.moves || 0) + 1;
+};
+
+GameManager.prototype.recordMergeStat = function (resultValue) {
+  var key = String(resultValue);
+  if (!this.stats.mergeCounts) this.stats.mergeCounts = {};
+  this.stats.mergeCounts[key] = (this.stats.mergeCounts[key] || 0) + 1;
+
+  if (resultValue > (this.stats.highestTile || 0)) {
+    this.stats.highestTile = resultValue;
+  }
+};
+
 // Save all tile positions and remove merger info
 GameManager.prototype.prepareTiles = function () {
   this.grid.eachCell(function (x, y, tile) {
@@ -263,6 +329,9 @@ GameManager.prototype.move = function (direction) {
   var traversals = this.buildTraversals(vector);
   var moved = false;
 
+  // Track merge events for this move (can be multiple in one move)
+  var mergedValuesThisMove = [];
+
   // Save the current tile positions and remove merger information
   this.prepareTiles();
 
@@ -278,7 +347,8 @@ GameManager.prototype.move = function (direction) {
 
         // Only one merger per row traversal?
         if (next && next.value === tile.value && !next.mergedFrom) {
-          var merged = new Tile(positions.next, tile.value * 2);
+          var mergedValue = tile.value * 2;
+          var merged = new Tile(positions.next, mergedValue);
           merged.mergedFrom = [tile, next];
 
           self.grid.insertTile(merged);
@@ -289,6 +359,9 @@ GameManager.prototype.move = function (direction) {
 
           // Update the score
           self.score += merged.value;
+
+          // Stats: record merge by resulting value
+          mergedValuesThisMove.push(mergedValue);
 
           // The mighty 2048 tile
           if (merged.value === 2048) self.won = true;
@@ -304,7 +377,21 @@ GameManager.prototype.move = function (direction) {
   });
 
   if (moved) {
+    // Stats: increment move count only for valid moves
+    this.incrementMoveStat();
+
+    // Stats: record all merges from this move
+    for (var i = 0; i < mergedValuesThisMove.length; i++) {
+      this.recordMergeStat(mergedValuesThisMove[i]);
+    }
+
     this.addRandomTile();
+
+    // Stats: highest tile may increase due to spawn as well (e.g., when continuing after load)
+    this.updateHighestTileFromGrid();
+
+    // Persist stats for refresh continuity (mode-aware via storageKeyPrefix)
+    this.storageManager.setStats(this.stats);
 
     if (!this.movesAvailable()) {
       this.over = true; // Game over!

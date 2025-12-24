@@ -38,6 +38,9 @@ function LocalStorageManager(storageKeyPrefix) {
   this.bestTimeAttackScoreKey = this.storageKeyPrefix + ":bestTimeAttackScore";
   this.gameStateKey = this.storageKeyPrefix + ":gameState";
 
+  // Current-run stats (namespaced)
+  this.statsKey = this.storageKeyPrefix + ":stats";
+
   // Global (non-namespaced) keys for UI selections
   this.settingsKeyPrefix = "2048:v2:settings";
   this.boardSizeKey = this.settingsKeyPrefix + ":boardSize";
@@ -117,4 +120,61 @@ LocalStorageManager.prototype.setGameState = function (gameState) {
 
 LocalStorageManager.prototype.clearGameState = function () {
   this.storage.removeItem(this.gameStateKey);
+};
+
+// --- Current-run stats getters/setters (namespaced) ---
+
+LocalStorageManager.prototype._defaultStats = function () {
+  return { moves: 0, highestTile: 0, mergeCounts: {} };
+};
+
+LocalStorageManager.prototype._sanitizeStats = function (stats) {
+  // Keep schema stable across refreshes and legacy states.
+  var d = this._defaultStats();
+  if (!stats || typeof stats !== "object") return d;
+
+  var moves = (typeof stats.moves === "number" && isFinite(stats.moves)) ? stats.moves : d.moves;
+  var highestTile = (typeof stats.highestTile === "number" && isFinite(stats.highestTile)) ? stats.highestTile : d.highestTile;
+
+  var mergeCounts = {};
+  if (stats.mergeCounts && typeof stats.mergeCounts === "object") {
+    Object.keys(stats.mergeCounts).forEach(function (k) {
+      var v = stats.mergeCounts[k];
+      var keyNum = parseInt(k, 10);
+      if (!isFinite(keyNum) || keyNum <= 0) return;
+      var count = (typeof v === "number" && isFinite(v) && v > 0) ? Math.floor(v) : 0;
+      if (count > 0) mergeCounts[String(keyNum)] = count;
+    });
+  }
+
+  return {
+    moves: Math.max(0, Math.floor(moves)),
+    highestTile: Math.max(0, Math.floor(highestTile)),
+    mergeCounts: mergeCounts
+  };
+};
+
+// PUBLIC_INTERFACE
+LocalStorageManager.prototype.getStats = function () {
+  /** Get current-run stats for this mode/size namespace. */
+  var raw = this.storage.getItem(this.statsKey);
+  if (!raw) return this._defaultStats();
+  try {
+    return this._sanitizeStats(JSON.parse(raw));
+  } catch (e) {
+    return this._defaultStats();
+  }
+};
+
+// PUBLIC_INTERFACE
+LocalStorageManager.prototype.setStats = function (stats) {
+  /** Persist current-run stats for this mode/size namespace. */
+  var safe = this._sanitizeStats(stats);
+  this.storage.setItem(this.statsKey, JSON.stringify(safe));
+};
+
+// PUBLIC_INTERFACE
+LocalStorageManager.prototype.clearStats = function () {
+  /** Clear current-run stats for this mode/size namespace (does not affect best scores). */
+  this.storage.removeItem(this.statsKey);
 };

@@ -106,6 +106,32 @@
       </div>
     </div>
 
+    <!-- Stats panel (compact, responsive-friendly) -->
+    <section class="stats-panel" aria-label="Game statistics">
+      <div class="stats-header">
+        <h2 class="stats-title">Stats</h2>
+        <button type="button" class="stats-reset-button" aria-label="Reset current run statistics">Reset stats</button>
+      </div>
+
+      <div class="stats-summary" role="group" aria-label="Statistics summary">
+        <div class="stats-item">
+          <span class="stats-label">Moves</span>
+          <span class="stats-value stats-moves" aria-label="Total moves">0</span>
+        </div>
+        <div class="stats-item">
+          <span class="stats-label">Highest</span>
+          <span class="stats-value stats-highest" aria-label="Highest tile achieved">0</span>
+        </div>
+      </div>
+
+      <details class="stats-merges" open>
+        <summary aria-label="Toggle merge counts">Merge counts</summary>
+        <div class="stats-merges-body" role="region" aria-label="Merge counts by tile value">
+          <ul class="stats-merge-list" aria-label="Merge count list"></ul>
+        </div>
+      </details>
+    </section>
+
     <p class="game-explanation">
       <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
     </p>

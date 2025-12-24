@@ -13,6 +13,13 @@ function KeyboardInputManager() {
   }
 
   this.listen();
+
+  // Listen for actuator-driven reset request (Stats panel button).
+  // This keeps the architecture consistent: UI -> InputManager -> GameManager.
+  var self = this;
+  window.addEventListener("resetStats", function () {
+    self.emit("resetStats");
+  });
 }
 
 KeyboardInputManager.prototype.on = function (event, callback) {
