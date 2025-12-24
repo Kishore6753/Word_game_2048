@@ -5,6 +5,7 @@
   <title>2048</title>
 
   <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link href="style/modes.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
   <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
@@ -29,6 +30,39 @@
     <div class="above-game">
       <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
       <a class="restart-button">New Game</a>
+    </div>
+
+    <div class="modes-panel" aria-label="Game modes and settings">
+      <div class="modes-row">
+        <label class="modes-field">
+          <span class="modes-label">Board</span>
+          <select class="board-size-select" aria-label="Board size">
+            <option value="4">4×4</option>
+            <option value="5">5×5</option>
+          </select>
+        </label>
+
+        <label class="modes-toggle">
+          <input type="checkbox" class="hard-mode-toggle" />
+          <span>Hard mode</span>
+        </label>
+
+        <label class="modes-toggle">
+          <input type="checkbox" class="time-attack-toggle" />
+          <span>Time-attack</span>
+        </label>
+      </div>
+
+      <div class="modes-row modes-row-secondary">
+        <div class="mode-badges" aria-live="polite">
+          <span class="mode-badge hard-badge" hidden>Hard</span>
+          <span class="mode-badge time-badge" hidden>Time-attack</span>
+        </div>
+        <div class="time-attack-status" hidden>
+          <span class="time-label">Time</span>
+          <span class="time-remaining" aria-label="Time remaining">2:00</span>
+        </div>
+      </div>
     </div>
 
     <div class="game-container">

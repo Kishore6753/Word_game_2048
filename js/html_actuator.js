@@ -1,13 +1,35 @@
+/*
+  Usage notes (modes update):
+  - Actuator now:
+      * Renders the background grid dynamically for 4x4 or 5x5 (instead of static HTML-only 4x4)
+      * Shows mode badges (Hard / Time-attack)
+      * Shows a countdown timer for time-attack and keeps "Best" display in sync
+  - Tile DOM stability and animation behavior is preserved (existing id-based renderer is kept).
+*/
+
 function HTMLActuator() {
-  this.tileContainer    = document.querySelector(".tile-container");
-  this.scoreContainer   = document.querySelector(".score-container");
-  this.bestContainer    = document.querySelector(".best-container");
+  this.tileContainer = document.querySelector(".tile-container");
+  this.scoreContainer = document.querySelector(".score-container");
+  this.bestContainer = document.querySelector(".best-container");
   this.messageContainer = document.querySelector(".game-message");
+
+  // New mode UI references (optional if markup missing)
+  this.gridContainer = document.querySelector(".grid-container");
+  this.timeAttackStatus = document.querySelector(".time-attack-status");
+  this.timeRemainingEl = document.querySelector(".time-remaining");
+  this.hardBadge = document.querySelector(".hard-badge");
+  this.timeBadge = document.querySelector(".time-badge");
 
   this.score = 0;
 
   // Track DOM elements by tile id so we can animate movement smoothly
   this.tiles = Object.create(null);
+
+  // Track last rendered board size so we can rebuild background grid
+  this._lastSize = null;
+
+  // Label elements on score panels (created once)
+  this._bestLabelEl = null;
 }
 
 /**
@@ -24,7 +46,7 @@ HTMLActuator.prototype.ensureTileId = function (tile) {
 };
 
 /**
- * Flatten grid into an array of tiles (including mergedFrom tiles so we can animate them too).
+ * Flatten grid into an array of tiles.
  */
 HTMLActuator.prototype.collectTiles = function (grid) {
   var tiles = [];
@@ -36,6 +58,82 @@ HTMLActuator.prototype.collectTiles = function (grid) {
   return tiles;
 };
 
+HTMLActuator.prototype.formatTime = function (ms) {
+  var totalSeconds = Math.ceil(ms / 1000);
+  var minutes = Math.floor(totalSeconds / 60);
+  var seconds = totalSeconds % 60;
+  return minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
+};
+
+/**
+ * Build/rebuild the background grid markup for the given size.
+ * This keeps the visual board correct for 5x5 while leaving tile positioning CSS-based.
+ */
+HTMLActuator.prototype.renderBackgroundGrid = function (size) {
+  if (!this.gridContainer) return;
+  if (this._lastSize === size) return;
+
+  this._lastSize = size;
+
+  // Clear existing cells
+  while (this.gridContainer.firstChild) {
+    this.gridContainer.removeChild(this.gridContainer.firstChild);
+  }
+
+  for (var y = 0; y < size; y++) {
+    var row = document.createElement("div");
+    row.className = "grid-row";
+    for (var x = 0; x < size; x++) {
+      var cell = document.createElement("div");
+      cell.className = "grid-cell";
+      row.appendChild(cell);
+    }
+    this.gridContainer.appendChild(row);
+  }
+};
+
+/**
+ * Update the "Best" label text on the best container to reflect time-attack.
+ */
+HTMLActuator.prototype.updateBestLabel = function (isTimeAttack) {
+  // The label is a ::after in CSS, but we can override with data-attribute + CSS hook.
+  // Keep it simple: add/remove a class and let CSS content switch.
+  // If CSS hook isn't present, we fallback to adding an inline label element.
+  var container = this.bestContainer;
+  if (!container) return;
+
+  if (isTimeAttack) {
+    container.classList.add("best-time-attack");
+  } else {
+    container.classList.remove("best-time-attack");
+  }
+
+  // Fallback label (for older CSS): inject a small absolute label if needed.
+  if (!this._bestLabelEl) {
+    var existing = container.querySelector(".best-label");
+    if (existing) {
+      this._bestLabelEl = existing;
+    } else {
+      var label = document.createElement("div");
+      label.className = "best-label";
+      label.textContent = "Best";
+      label.style.position = "absolute";
+      label.style.top = "10px";
+      label.style.left = "0";
+      label.style.width = "100%";
+      label.style.textTransform = "uppercase";
+      label.style.fontSize = "13px";
+      label.style.lineHeight = "13px";
+      label.style.textAlign = "center";
+      label.style.color = "#eee4da";
+      container.appendChild(label);
+      this._bestLabelEl = label;
+    }
+  }
+
+  this._bestLabelEl.textContent = isTimeAttack ? "Best (TA)" : "Best";
+};
+
 /**
  * PUBLIC_INTERFACE
  * Render the new game state.
@@ -45,14 +143,49 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
   var self = this;
 
   window.requestAnimationFrame(function () {
+    var size = (metadata && metadata.mode && metadata.mode.size) ? metadata.mode.size : grid.size;
+
+    // Toggle size class for CSS-based positioning (4x4 uses existing rules; 5x5 uses modes.css).
+    var gameContainer = document.getElementsByClassName("game-container")[0];
+    if (gameContainer) {
+      if (size === 5) gameContainer.classList.add("size-5");
+      else gameContainer.classList.remove("size-5");
+    }
+
+    self.renderBackgroundGrid(size);
+
+    // Update badges/timer
+    var isHard = !!(metadata && metadata.mode && metadata.mode.hard);
+    var isTimeAttack = !!(metadata && metadata.mode && metadata.mode.timeAttack);
+
+    if (self.hardBadge) self.hardBadge.hidden = !isHard;
+    if (self.timeBadge) self.timeBadge.hidden = !isTimeAttack;
+
+    if (self.timeAttackStatus) {
+      self.timeAttackStatus.hidden = !isTimeAttack;
+    }
+    if (self.timeRemainingEl) {
+      if (isTimeAttack && typeof metadata.timeRemainingMs === "number") {
+        self.timeRemainingEl.textContent = self.formatTime(metadata.timeRemainingMs);
+        if (metadata.timeRemainingMs <= 15000) {
+          self.timeRemainingEl.classList.add("time-low");
+        } else {
+          self.timeRemainingEl.classList.remove("time-low");
+        }
+      } else {
+        self.timeRemainingEl.textContent = "2:00";
+        self.timeRemainingEl.classList.remove("time-low");
+      }
+    }
+
+    self.updateBestLabel(isTimeAttack);
+
     // Build a set of ids that must exist after this render.
     var tiles = self.collectTiles(grid);
     var activeIds = Object.create(null);
 
-    // Create/update tiles in a stable order. Also render mergedFrom tiles (the "sources")
-    // so the merge animation doesn't visually double-merge.
+    // Ensure ids exist for current tile and its mergedFrom sources.
     tiles.forEach(function (tile) {
-      // Ensure ids exist for current tile and its mergedFrom sources.
       self.ensureTileId(tile);
       if (tile.mergedFrom) {
         tile.mergedFrom.forEach(function (src) {
@@ -61,7 +194,7 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
       }
     });
 
-    // First: render/update all mergedFrom source tiles (so they can move into the merge target).
+    // First: render/update all mergedFrom source tiles.
     tiles.forEach(function (tile) {
       if (!tile.mergedFrom) return;
       tile.mergedFrom.forEach(function (src) {
@@ -93,6 +226,8 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
         self.message(false); // You lose
       } else if (metadata.won) {
         self.message(true); // You win!
+      } else if (isTimeAttack) {
+        self.message("time"); // Time's up
       }
     }
   });
@@ -136,10 +271,6 @@ HTMLActuator.prototype.createTileElement = function (tile) {
 
 /**
  * Update/create tile node and schedule class changes to ensure transitions fire.
- *
- * Options:
- * - isMergeSource: when true, tile is one of the source tiles that will be removed after the merge.
- * - isMergeTarget: when true, tile is the resulting merged tile (gets bump/highlight).
  */
 HTMLActuator.prototype.updateOrCreateTile = function (tile, options) {
   var self = this;
@@ -150,7 +281,6 @@ HTMLActuator.prototype.updateOrCreateTile = function (tile, options) {
   var wrapper = existing || this.createTileElement(tile);
   var inner = wrapper.querySelector(".tile-inner");
 
-  // Update text/value (for merge targets the value has already changed in game logic).
   inner.textContent = tile.value;
 
   var position = tile.previousPosition || { x: tile.x, y: tile.y };
@@ -161,7 +291,6 @@ HTMLActuator.prototype.updateOrCreateTile = function (tile, options) {
 
   if (tile.value > 2048) classes.push("tile-super");
 
-  // Mark movement intent (purely for styling hooks / potential future use).
   if (tile.previousPosition && (tile.previousPosition.x !== tile.x || tile.previousPosition.y !== tile.y)) {
     classes.push("tile-moving");
   }
@@ -170,27 +299,22 @@ HTMLActuator.prototype.updateOrCreateTile = function (tile, options) {
     classes.push("tile-merged");
   }
 
-  // New tile (no previous position and not a merge target)
   if (!tile.previousPosition && !options.isMergeTarget) {
     classes.push("tile-new");
   }
 
-  // Apply initial classes at the "from" position.
   this.applyClasses(wrapper, classes);
 
-  // Force the browser to register initial state, then apply the "to" state in next frame.
-  // This ensures transform transitions reliably trigger without layout thrash (one read).
+  // Force initial state to register
   // eslint-disable-next-line no-unused-expressions
   wrapper.offsetWidth;
 
   if (fromClass !== toClass) {
     window.requestAnimationFrame(function () {
-      // Replace position class to the destination position.
       classes[2] = toClass;
       self.applyClasses(wrapper, classes);
     });
   } else if (options.isMergeTarget) {
-    // Even if it didn't move, still schedule merge "bump" so it plays after paint.
     window.requestAnimationFrame(function () {
       self.applyClasses(wrapper, classes);
     });
@@ -221,15 +345,21 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 };
 
 HTMLActuator.prototype.message = function (won) {
-  var type    = won ? "game-won" : "game-over";
-  var message = won ? "You win!" : "Game over!";
+  var type, message;
+
+  if (won === "time") {
+    type = "game-over";
+    message = "Time!";
+  } else {
+    type = won ? "game-won" : "game-over";
+    message = won ? "You win!" : "Game over!";
+  }
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
 };
 
 HTMLActuator.prototype.clearMessage = function () {
-  // IE only takes one value to remove at a time.
   this.messageContainer.classList.remove("game-won");
   this.messageContainer.classList.remove("game-over");
 };

@@ -1,10 +1,36 @@
-function GameManager(size, InputManager, Actuator, StorageManager) {
-  this.size           = size; // Size of the grid
-  this.inputManager   = new InputManager;
-  this.storageManager = new StorageManager;
-  this.actuator       = new Actuator;
+/*
+  Usage notes (modes update):
+  - GameManager now supports:
+      * board sizes: 4x4 (default) and 5x5
+      * hard mode: starts with 1 tile and spawns 4s at 50% (instead of 10%)
+      * time-attack: 2-minute countdown; input freezes at 0 and final score is shown
+  - Saves and best scores are managed via a mode+size namespaced LocalStorageManager instance.
+*/
 
-  this.startTiles     = 2;
+function GameManager(size, InputManager, Actuator, StorageManager, options) {
+  options = options || {};
+
+  this.size = size; // Size of the grid
+  this.inputManager = new InputManager;
+  this.storageManager = new StorageManager(options.storageKeyPrefix);
+  this.actuator = new Actuator;
+
+  this.mode = {
+    hard: !!options.hardMode,
+    timeAttack: !!options.timeAttack,
+    timeLimitMs: typeof options.timeLimitMs === "number" ? options.timeLimitMs : (2 * 60 * 1000)
+  };
+
+  // Hard mode rule: fewer starting tiles.
+  this.startTiles = this.mode.hard ? 1 : 2;
+
+  // Time-attack runtime state
+  this.timeAttack = {
+    remainingMs: this.mode.timeLimitMs,
+    running: false,
+    ended: false,
+    intervalId: null
+  };
 
   this.inputManager.on("move", this.move.bind(this));
   this.inputManager.on("restart", this.restart.bind(this));
@@ -15,6 +41,7 @@ function GameManager(size, InputManager, Actuator, StorageManager) {
 
 // Restart the game
 GameManager.prototype.restart = function () {
+  this.stopTimer();
   this.storageManager.clearGameState();
   this.actuator.continueGame(); // Clear the game won/lost message
   this.setup();
@@ -26,32 +53,56 @@ GameManager.prototype.keepPlaying = function () {
   this.actuator.continueGame(); // Clear the game won/lost message
 };
 
-// Return true if the game is lost, or has won and the user hasn't kept playing
+// Return true if the game is lost, or has won and the user hasn't kept playing, or time-attack ended
 GameManager.prototype.isGameTerminated = function () {
-  return this.over || (this.won && !this.keepPlaying);
+  return this.over || (this.won && !this.keepPlaying) || (this.mode.timeAttack && this.timeAttack.ended);
 };
 
 // Set up the game
 GameManager.prototype.setup = function () {
   var previousState = this.storageManager.getGameState();
 
-  // Reload the game from a previous game if present
+  // Reload the game from a previous game if present (for this namespace)
   if (previousState) {
-    this.grid        = new Grid(previousState.grid.size,
-                                previousState.grid.cells); // Reload grid
-    this.score       = previousState.score;
-    this.over        = previousState.over;
-    this.won         = previousState.won;
+    this.grid = new Grid(previousState.grid.size,
+                         previousState.grid.cells); // Reload grid
+    this.score = previousState.score;
+    this.over = previousState.over;
+    this.won = previousState.won;
     this.keepPlaying = previousState.keepPlaying;
+
+    // Restore time-attack remaining time if applicable.
+    if (this.mode.timeAttack) {
+      this.timeAttack.remainingMs = typeof previousState.timeRemainingMs === "number"
+        ? previousState.timeRemainingMs
+        : this.mode.timeLimitMs;
+      this.timeAttack.ended = !!previousState.timeEnded;
+    } else {
+      // Ensure non-TA mode doesn't inherit stale values.
+      this.timeAttack.remainingMs = this.mode.timeLimitMs;
+      this.timeAttack.ended = false;
+    }
   } else {
-    this.grid        = new Grid(this.size);
-    this.score       = 0;
-    this.over        = false;
-    this.won         = false;
+    this.grid = new Grid(this.size);
+    this.score = 0;
+    this.over = false;
+    this.won = false;
     this.keepPlaying = false;
+
+    if (this.mode.timeAttack) {
+      this.timeAttack.remainingMs = this.mode.timeLimitMs;
+      this.timeAttack.ended = false;
+    }
 
     // Add the initial tiles
     this.addStartTiles();
+  }
+
+  // Start timer if needed and game not ended
+  if (this.mode.timeAttack && !this.timeAttack.ended) {
+    this.startTimer();
+  } else {
+    this.stopTimer();
   }
 
   // Update the actuator
@@ -68,20 +119,40 @@ GameManager.prototype.addStartTiles = function () {
 // Adds a tile in a random position
 GameManager.prototype.addRandomTile = function () {
   if (this.grid.cellsAvailable()) {
-    var value = Math.random() < 0.9 ? 2 : 4;
-    var tile = new Tile(this.grid.randomAvailableCell(), value);
+    // Hard mode: spawn 4s more often (50%)
+    var fourProbability = this.mode.hard ? 0.5 : 0.1;
+    var value = Math.random() < (1 - fourProbability) ? 2 : 4;
 
+    var tile = new Tile(this.grid.randomAvailableCell(), value);
     this.grid.insertTile(tile);
+  }
+};
+
+// PUBLIC_INTERFACE
+GameManager.prototype.getBestScoreForCurrentMode = function () {
+  /** Get the relevant best score (normal vs time-attack) for current mode namespace. */
+  return this.mode.timeAttack
+    ? this.storageManager.getBestTimeAttackScore()
+    : this.storageManager.getBestScore();
+};
+
+// Update best score for current mode
+GameManager.prototype.updateBestScoreForCurrentMode = function () {
+  var best = this.getBestScoreForCurrentMode();
+  if (this.score > best) {
+    if (this.mode.timeAttack) {
+      this.storageManager.setBestTimeAttackScore(this.score);
+    } else {
+      this.storageManager.setBestScore(this.score);
+    }
   }
 };
 
 // Sends the updated grid to the actuator
 GameManager.prototype.actuate = function () {
-  if (this.storageManager.getBestScore() < this.score) {
-    this.storageManager.setBestScore(this.score);
-  }
+  this.updateBestScoreForCurrentMode();
 
-  // Clear the state when the game is over (game over only, not win)
+  // Clear the state when the game is over (game over only, not win; time-attack still shows end state)
   if (this.over) {
     this.storageManager.clearGameState();
   } else {
@@ -89,24 +160,77 @@ GameManager.prototype.actuate = function () {
   }
 
   this.actuator.actuate(this.grid, {
-    score:      this.score,
-    over:       this.over,
-    won:        this.won,
-    bestScore:  this.storageManager.getBestScore(),
-    terminated: this.isGameTerminated()
-  });
+    score: this.score,
+    over: this.over,
+    won: this.won,
+    bestScore: this.getBestScoreForCurrentMode(),
+    terminated: this.isGameTerminated(),
 
+    // Mode metadata for UI
+    mode: {
+      size: this.size,
+      hard: this.mode.hard,
+      timeAttack: this.mode.timeAttack
+    },
+    timeRemainingMs: this.mode.timeAttack ? this.timeAttack.remainingMs : null
+  });
 };
 
 // Represent the current game as an object
 GameManager.prototype.serialize = function () {
   return {
-    grid:        this.grid.serialize(),
-    score:       this.score,
-    over:        this.over,
-    won:         this.won,
-    keepPlaying: this.keepPlaying
+    grid: this.grid.serialize(),
+    score: this.score,
+    over: this.over,
+    won: this.won,
+    keepPlaying: this.keepPlaying,
+
+    // time-attack state is saved only within this namespace
+    timeRemainingMs: this.mode.timeAttack ? this.timeAttack.remainingMs : null,
+    timeEnded: this.mode.timeAttack ? this.timeAttack.ended : null
   };
+};
+
+GameManager.prototype.startTimer = function () {
+  var self = this;
+  if (!this.mode.timeAttack) return;
+  if (this.timeAttack.intervalId != null) return;
+
+  this.timeAttack.running = true;
+
+  // Tick 5x/sec for smoother UI without excessive work.
+  this.timeAttack.intervalId = window.setInterval(function () {
+    if (self.timeAttack.ended || self.over) return;
+
+    self.timeAttack.remainingMs = Math.max(0, self.timeAttack.remainingMs - 200);
+
+    if (self.timeAttack.remainingMs === 0) {
+      self.endTimeAttack();
+      return;
+    }
+
+    // Persist remaining time so reloads don't reset the clock for that namespace.
+    self.storageManager.setGameState(self.serialize());
+    self.actuate();
+  }, 200);
+};
+
+GameManager.prototype.stopTimer = function () {
+  if (this.timeAttack.intervalId != null) {
+    window.clearInterval(this.timeAttack.intervalId);
+    this.timeAttack.intervalId = null;
+  }
+  this.timeAttack.running = false;
+};
+
+GameManager.prototype.endTimeAttack = function () {
+  if (!this.mode.timeAttack) return;
+  this.timeAttack.ended = true;
+  this.stopTimer();
+
+  // Persist end state (so reload shows it ended) but do not clear (like game-over).
+  this.storageManager.setGameState(this.serialize());
+  this.actuate();
 };
 
 // Save all tile positions and remove merger info
@@ -135,9 +259,9 @@ GameManager.prototype.move = function (direction) {
 
   var cell, tile;
 
-  var vector     = this.getVector(direction);
+  var vector = this.getVector(direction);
   var traversals = this.buildTraversals(vector);
-  var moved      = false;
+  var moved = false;
 
   // Save the current tile positions and remove merger information
   this.prepareTiles();
@@ -150,7 +274,7 @@ GameManager.prototype.move = function (direction) {
 
       if (tile) {
         var positions = self.findFarthestPosition(cell, vector);
-        var next      = self.grid.cellContent(positions.next);
+        var next = self.grid.cellContent(positions.next);
 
         // Only one merger per row traversal?
         if (next && next.value === tile.value && !next.mergedFrom) {
@@ -184,6 +308,7 @@ GameManager.prototype.move = function (direction) {
 
     if (!this.movesAvailable()) {
       this.over = true; // Game over!
+      this.stopTimer();
     }
 
     this.actuate();
@@ -225,7 +350,7 @@ GameManager.prototype.findFarthestPosition = function (cell, vector) {
   // Progress towards the vector direction until an obstacle is found
   do {
     previous = cell;
-    cell     = { x: previous.x + vector.x, y: previous.y + vector.y };
+    cell = { x: previous.x + vector.x, y: previous.y + vector.y };
   } while (this.grid.withinBounds(cell) &&
            this.grid.cellAvailable(cell));
 
@@ -252,9 +377,9 @@ GameManager.prototype.tileMatchesAvailable = function () {
       if (tile) {
         for (var direction = 0; direction < 4; direction++) {
           var vector = self.getVector(direction);
-          var cell   = { x: x + vector.x, y: y + vector.y };
+          var cell = { x: x + vector.x, y: y + vector.y };
 
-          var other  = self.grid.cellContent(cell);
+          var other = self.grid.cellContent(cell);
 
           if (other && other.value === tile.value) {
             return true; // These two tiles can be merged

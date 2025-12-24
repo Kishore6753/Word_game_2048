@@ -116,6 +116,9 @@ h1.title {
 .best-container:after {
   content: "Best"; }
 
+.best-container.best-time-attack:after {
+  content: "Best (TA)"; }
+
 p {
   margin-top: 0;
   margin-bottom: 10px;
@@ -378,6 +381,106 @@ hr {
   display: block;
   clear: both; }
 
+/* --- Modes / settings panel (added for 5x5, hard mode, time-attack) --- */
+.modes-panel {
+  margin-top: 14px;
+  background: rgba(187, 173, 160, 0.18);
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.modes-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.modes-row-secondary {
+  margin-top: 8px;
+  justify-content: space-between;
+}
+
+.modes-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modes-label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #776e65;
+  opacity: 0.9;
+}
+
+.board-size-select {
+  border: 1px solid rgba(119, 110, 101, 0.25);
+  background: #faf8ef;
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-weight: bold;
+  color: #776e65;
+}
+
+.modes-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+  font-weight: bold;
+  color: #776e65;
+}
+
+.modes-toggle input {
+  width: 16px;
+  height: 16px;
+}
+
+.mode-badges {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.mode-badge {
+  display: inline-block;
+  background: #8f7a66;
+  color: #f9f6f2;
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: bold;
+}
+
+.time-attack-status {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  font-weight: bold;
+}
+
+.time-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #776e65;
+  opacity: 0.9;
+  letter-spacing: 0.04em;
+}
+
+.time-remaining {
+  display: inline-block;
+  min-width: 54px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.time-remaining.time-low {
+  color: #f65e3b;
+}
+
 .game-intro {
   float: left;
   line-height: 42px;
@@ -435,6 +538,23 @@ hr {
     display: block;
     box-sizing: border-box;
     margin-top: 2px; }
+
+  .modes-panel {
+    padding: 8px 10px;
+  }
+
+  .board-size-select {
+    padding: 5px 7px;
+  }
+
+  .mode-badge {
+    padding: 3px 8px;
+    font-size: 11px;
+  }
+
+  .time-remaining {
+    min-width: 46px;
+  }
 
   .game-container {
     margin-top: 17px;

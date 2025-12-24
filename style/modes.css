@@ -1,0 +1,128 @@
+/*
+  Extra positioning rules for alternative board sizes.
+  Kept in a separate file to minimize risk to existing 4x4 styles.
+
+  - 5x5 mode uses the same 500x500 container but smaller cells/tiles and
+    its own tile-position transforms so movement animations remain transform-only.
+*/
+
+.game-container.size-5 {
+  width: 500px;
+  height: 500px;
+}
+
+.game-container.size-5 .grid-row {
+  margin-bottom: 12px;
+}
+.game-container.size-5 .grid-row:last-child {
+  margin-bottom: 0;
+}
+
+.game-container.size-5 .grid-cell {
+  width: 84px;
+  height: 84px;
+  margin-right: 12px;
+}
+.game-container.size-5 .grid-cell:last-child {
+  margin-right: 0;
+}
+
+.game-container.size-5 .tile,
+.game-container.size-5 .tile .tile-inner {
+  width: 84px;
+  height: 84px;
+  line-height: 84px;
+}
+.game-container.size-5 .tile .tile-inner {
+  font-size: 42px;
+}
+
+/* step = tileSize + gap = 84 + 12 = 96 */
+.game-container.size-5 .tile.tile-position-1-1 { transform: translate(0px, 0px); }
+.game-container.size-5 .tile.tile-position-1-2 { transform: translate(0px, 96px); }
+.game-container.size-5 .tile.tile-position-1-3 { transform: translate(0px, 192px); }
+.game-container.size-5 .tile.tile-position-1-4 { transform: translate(0px, 288px); }
+.game-container.size-5 .tile.tile-position-1-5 { transform: translate(0px, 384px); }
+
+.game-container.size-5 .tile.tile-position-2-1 { transform: translate(96px, 0px); }
+.game-container.size-5 .tile.tile-position-2-2 { transform: translate(96px, 96px); }
+.game-container.size-5 .tile.tile-position-2-3 { transform: translate(96px, 192px); }
+.game-container.size-5 .tile.tile-position-2-4 { transform: translate(96px, 288px); }
+.game-container.size-5 .tile.tile-position-2-5 { transform: translate(96px, 384px); }
+
+.game-container.size-5 .tile.tile-position-3-1 { transform: translate(192px, 0px); }
+.game-container.size-5 .tile.tile-position-3-2 { transform: translate(192px, 96px); }
+.game-container.size-5 .tile.tile-position-3-3 { transform: translate(192px, 192px); }
+.game-container.size-5 .tile.tile-position-3-4 { transform: translate(192px, 288px); }
+.game-container.size-5 .tile.tile-position-3-5 { transform: translate(192px, 384px); }
+
+.game-container.size-5 .tile.tile-position-4-1 { transform: translate(288px, 0px); }
+.game-container.size-5 .tile.tile-position-4-2 { transform: translate(288px, 96px); }
+.game-container.size-5 .tile.tile-position-4-3 { transform: translate(288px, 192px); }
+.game-container.size-5 .tile.tile-position-4-4 { transform: translate(288px, 288px); }
+.game-container.size-5 .tile.tile-position-4-5 { transform: translate(288px, 384px); }
+
+.game-container.size-5 .tile.tile-position-5-1 { transform: translate(384px, 0px); }
+.game-container.size-5 .tile.tile-position-5-2 { transform: translate(384px, 96px); }
+.game-container.size-5 .tile.tile-position-5-3 { transform: translate(384px, 192px); }
+.game-container.size-5 .tile.tile-position-5-4 { transform: translate(384px, 288px); }
+.game-container.size-5 .tile.tile-position-5-5 { transform: translate(384px, 384px); }
+
+/* Responsive (mobile container is 280x280; step = 48+8=56) */
+@media screen and (max-width: 520px) {
+  .game-container.size-5 {
+    width: 280px;
+    height: 280px;
+  }
+
+  .game-container.size-5 .grid-row {
+    margin-bottom: 8px;
+  }
+
+  .game-container.size-5 .grid-cell {
+    width: 48px;
+    height: 48px;
+    margin-right: 8px;
+  }
+
+  .game-container.size-5 .tile,
+  .game-container.size-5 .tile .tile-inner {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+  }
+
+  .game-container.size-5 .tile .tile-inner {
+    font-size: 26px;
+  }
+
+  .game-container.size-5 .tile.tile-position-1-1 { transform: translate(0px, 0px); }
+  .game-container.size-5 .tile.tile-position-1-2 { transform: translate(0px, 56px); }
+  .game-container.size-5 .tile.tile-position-1-3 { transform: translate(0px, 112px); }
+  .game-container.size-5 .tile.tile-position-1-4 { transform: translate(0px, 168px); }
+  .game-container.size-5 .tile.tile-position-1-5 { transform: translate(0px, 224px); }
+
+  .game-container.size-5 .tile.tile-position-2-1 { transform: translate(56px, 0px); }
+  .game-container.size-5 .tile.tile-position-2-2 { transform: translate(56px, 56px); }
+  .game-container.size-5 .tile.tile-position-2-3 { transform: translate(56px, 112px); }
+  .game-container.size-5 .tile.tile-position-2-4 { transform: translate(56px, 168px); }
+  .game-container.size-5 .tile.tile-position-2-5 { transform: translate(56px, 224px); }
+
+  .game-container.size-5 .tile.tile-position-3-1 { transform: translate(112px, 0px); }
+  .game-container.size-5 .tile.tile-position-3-2 { transform: translate(112px, 56px); }
+  .game-container.size-5 .tile.tile-position-3-3 { transform: translate(112px, 112px); }
+  .game-container.size-5 .tile.tile-position-3-4 { transform: translate(112px, 168px); }
+  .game-container.size-5 .tile.tile-position-3-5 { transform: translate(112px, 224px); }
+
+  .game-container.size-5 .tile.tile-position-4-1 { transform: translate(168px, 0px); }
+  .game-container.size-5 .tile.tile-position-4-2 { transform: translate(168px, 56px); }
+  .game-container.size-5 .tile.tile-position-4-3 { transform: translate(168px, 112px); }
+  .game-container.size-5 .tile.tile-position-4-4 { transform: translate(168px, 168px); }
+  .game-container.size-5 .tile.tile-position-4-5 { transform: translate(168px, 224px); }
+
+  .game-container.size-5 .tile.tile-position-5-1 { transform: translate(224px, 0px); }
+  .game-container.size-5 .tile.tile-position-5-2 { transform: translate(224px, 56px); }
+  .game-container.size-5 .tile.tile-position-5-3 { transform: translate(224px, 112px); }
+  .game-container.size-5 .tile.tile-position-5-4 { transform: translate(224px, 168px); }
+  .game-container.size-5 .tile.tile-position-5-5 { transform: translate(224px, 224px); }
+}
