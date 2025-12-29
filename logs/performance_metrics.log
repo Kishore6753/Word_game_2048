@@ -211,3 +211,1398 @@
 2025-12-22 04:11:29,677 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 267, Duration: 0ms
 2025-12-22 04:11:29,933 - Knowledge - INFO - Saving knowledge to Redis...
 2025-12-22 04:11:30,138 - Knowledge - INFO - Knowledge saved to Redis successfully
+2025-12-22 05:00:47,832 - Knowledge - INFO - Created shared MongoDB connection pool
+2025-12-22 05:00:48,165 - Knowledge - INFO - Starting Knowledge Graph processing with 20 threads
+2025-12-22 05:00:48,333 - Knowledge - INFO - Initial configuration: chunk_size=65536, max_cache_size=500
+2025-12-22 05:00:48,518 - Knowledge - INFO - Knowledge Graph concurrency configuration: workers=20, max_batch_size=10, max_concurrent_llm_calls=50
+2025-12-22 05:00:49,437 - Knowledge - INFO - 🔍 _load_persisted_knowledge called - checking for Redis optimization
+2025-12-22 05:00:49,583 - Knowledge - WARNING - ❌ load_from_redis method not found - Redis support not attached
+2025-12-22 05:00:49,735 - Knowledge - INFO - load persisted knowledge: begin
+2025-12-22 05:00:50,123 - Knowledge - INFO - Persisted knowledge files in /app/data/T0015/299123/b9174ov/Word_game_2048/.knowledge have been renamed to use .json
+2025-12-22 05:00:50,306 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:00:50,462 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:00:50,667 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:00:50,848 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:00:51,009 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/local_storage_manager.js
+2025-12-22 05:00:51,222 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 67ms
+2025-12-22 05:00:52,262 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: js/local_storage_manager.js, Duration: 858ms
+2025-12-22 05:00:52,457 - Knowledge - INFO - persist search terms embedding for js/local_storage_manager.js
+2025-12-22 05:00:52,708 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/local_storage_manager.js
+2025-12-22 05:00:52,851 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:00:53,006 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:00:53,248 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:00:53,429 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:00:53,590 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/style/main.css
+2025-12-22 05:00:53,850 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 74ms
+2025-12-22 05:00:54,259 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: style/main.css, Duration: 194ms
+2025-12-22 05:00:54,434 - Knowledge - INFO - persist search terms embedding for style/main.css
+2025-12-22 05:00:54,638 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/style/main.css
+2025-12-22 05:00:54,814 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:00:54,999 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:00:55,211 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:00:55,364 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:00:55,597 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/bind_polyfill.js
+2025-12-22 05:00:55,808 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 77ms
+2025-12-22 05:00:56,162 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: js/bind_polyfill.js, Duration: 204ms
+2025-12-22 05:00:56,349 - Knowledge - INFO - persist search terms embedding for js/bind_polyfill.js
+2025-12-22 05:00:56,530 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/bind_polyfill.js
+2025-12-22 05:00:56,725 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:00:56,945 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:00:57,172 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:00:57,360 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:00:57,521 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/html_actuator.js
+2025-12-22 05:00:57,746 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 63ms
+2025-12-22 05:00:58,140 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: js/html_actuator.js, Duration: 209ms
+2025-12-22 05:00:58,323 - Knowledge - INFO - persist search terms embedding for js/html_actuator.js
+2025-12-22 05:00:58,480 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/html_actuator.js
+2025-12-22 05:00:58,679 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:00:58,819 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:00:59,051 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:00:59,293 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:00:59,442 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/animframe_polyfill.js
+2025-12-22 05:00:59,680 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 68ms
+2025-12-22 05:01:00,054 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: js/animframe_polyfill.js, Duration: 195ms
+2025-12-22 05:01:00,248 - Knowledge - INFO - persist search terms embedding for js/animframe_polyfill.js
+2025-12-22 05:01:00,423 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/animframe_polyfill.js
+2025-12-22 05:01:00,591 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:00,757 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:01,001 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:01,207 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:01,373 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/keyboard_input_manager.js
+2025-12-22 05:01:01,671 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 84ms
+2025-12-22 05:01:02,169 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: js/keyboard_input_manager.js, Duration: 302ms
+2025-12-22 05:01:02,386 - Knowledge - INFO - persist search terms embedding for js/keyboard_input_manager.js
+2025-12-22 05:01:02,568 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/keyboard_input_manager.js
+2025-12-22 05:01:02,727 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:02,878 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:03,083 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:03,256 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:03,413 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/LICENSE.txt
+2025-12-22 05:01:03,679 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 77ms
+2025-12-22 05:01:04,076 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: LICENSE.txt, Duration: 232ms
+2025-12-22 05:01:04,229 - Knowledge - INFO - persist search terms embedding for LICENSE.txt
+2025-12-22 05:01:04,453 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/LICENSE.txt
+2025-12-22 05:01:04,641 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:04,830 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:05,034 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:05,202 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:05,413 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/style/fonts/clear-sans.css
+2025-12-22 05:01:05,687 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 94ms
+2025-12-22 05:01:06,122 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: style/fonts/clear-sans.css, Duration: 217ms
+2025-12-22 05:01:06,285 - Knowledge - INFO - persist search terms embedding for style/fonts/clear-sans.css
+2025-12-22 05:01:06,487 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/style/fonts/clear-sans.css
+2025-12-22 05:01:06,667 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:06,840 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:07,052 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:07,241 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:07,390 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/tile.js
+2025-12-22 05:01:07,633 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 68ms
+2025-12-22 05:01:08,025 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: js/tile.js, Duration: 238ms
+2025-12-22 05:01:08,160 - Knowledge - INFO - persist search terms embedding for js/tile.js
+2025-12-22 05:01:08,332 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/tile.js
+2025-12-22 05:01:08,506 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:08,705 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:08,920 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:09,080 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:09,274 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/grid.js
+2025-12-22 05:01:09,557 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 68ms
+2025-12-22 05:01:09,967 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: js/grid.js, Duration: 237ms
+2025-12-22 05:01:10,167 - Knowledge - INFO - persist search terms embedding for js/grid.js
+2025-12-22 05:01:10,359 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/grid.js
+2025-12-22 05:01:10,553 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:10,740 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:10,981 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:11,165 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:11,320 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/README.md
+2025-12-22 05:01:11,546 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 62ms
+2025-12-22 05:01:12,006 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: README.md, Duration: 301ms
+2025-12-22 05:01:12,180 - Knowledge - INFO - persist search terms embedding for README.md
+2025-12-22 05:01:12,334 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/README.md
+2025-12-22 05:01:12,509 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:12,685 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:12,904 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:13,075 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:13,303 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/style/helpers.scss
+2025-12-22 05:01:13,522 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 64ms
+2025-12-22 05:01:13,923 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: style/helpers.scss, Duration: 237ms
+2025-12-22 05:01:14,088 - Knowledge - INFO - persist search terms embedding for style/helpers.scss
+2025-12-22 05:01:14,250 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/style/helpers.scss
+2025-12-22 05:01:14,419 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:14,562 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:14,770 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:14,918 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:15,096 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/classlist_polyfill.js
+2025-12-22 05:01:15,384 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 72ms
+2025-12-22 05:01:15,762 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: js/classlist_polyfill.js, Duration: 188ms
+2025-12-22 05:01:15,953 - Knowledge - INFO - persist search terms embedding for js/classlist_polyfill.js
+2025-12-22 05:01:16,192 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/classlist_polyfill.js
+2025-12-22 05:01:16,396 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:16,563 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:16,804 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:16,992 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:17,186 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/index.html
+2025-12-22 05:01:17,400 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 67ms
+2025-12-22 05:01:18,020 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: index.html, Duration: 481ms
+2025-12-22 05:01:18,188 - Knowledge - INFO - persist search terms embedding for index.html
+2025-12-22 05:01:18,382 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/index.html
+2025-12-22 05:01:18,555 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:18,705 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:18,912 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:19,078 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:19,259 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/game_manager.js
+2025-12-22 05:01:19,487 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 73ms
+2025-12-22 05:01:19,892 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: js/game_manager.js, Duration: 255ms
+2025-12-22 05:01:20,042 - Knowledge - INFO - persist search terms embedding for js/game_manager.js
+2025-12-22 05:01:20,220 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/game_manager.js
+2025-12-22 05:01:20,404 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:20,575 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:20,776 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:20,952 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:21,134 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/application.js
+2025-12-22 05:01:21,396 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 78ms
+2025-12-22 05:01:21,888 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: js/application.js, Duration: 326ms
+2025-12-22 05:01:22,071 - Knowledge - INFO - persist search terms embedding for js/application.js
+2025-12-22 05:01:22,272 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/application.js
+2025-12-22 05:01:22,433 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:22,613 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:22,824 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:23,036 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:23,208 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/CONTRIBUTING.md
+2025-12-22 05:01:23,462 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 90ms
+2025-12-22 05:01:23,869 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: CONTRIBUTING.md, Duration: 246ms
+2025-12-22 05:01:24,062 - Knowledge - INFO - persist search terms embedding for CONTRIBUTING.md
+2025-12-22 05:01:24,218 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/CONTRIBUTING.md
+2025-12-22 05:01:24,418 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:24,590 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:24,820 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:24,983 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:25,133 - Knowledge - INFO - persist ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/style/main.scss
+2025-12-22 05:01:25,352 - Knowledge - INFO - [MONGODB_OP] Completed: persist, Collection: file_info, Duration: 67ms
+2025-12-22 05:01:25,748 - Knowledge - INFO - [REDIS_OP] Completed: store_embedding, Key: style/main.scss, Duration: 203ms
+2025-12-22 05:01:25,923 - Knowledge - INFO - persist search terms embedding for style/main.scss
+2025-12-22 05:01:26,133 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/style/main.scss
+2025-12-22 05:01:26,325 - Knowledge - INFO - Loaded 18 files from persisted knowledge
+2025-12-22 05:01:26,528 - Knowledge - INFO - load persisted knowledge: end
+2025-12-22 05:01:26,742 - Knowledge - INFO - Redis support added with prefix knowledge:b9174ov:
+2025-12-22 05:01:26,937 - Knowledge - INFO - Starting knowledge initialization for ID: f0qQcf-b9174ov
+2025-12-22 05:01:27,129 - Knowledge - INFO - 🔍 Checking Redis for build_id: b9174ov
+2025-12-22 05:01:27,308 - Knowledge - INFO - 🔍 Full session ID: f0qQcf-b9174ov
+2025-12-22 05:01:27,529 - Knowledge - INFO - 🔍 Redis prefix will be: knowledge:b9174ov:
+2025-12-22 05:01:27,745 - Knowledge - INFO - 🔍 Using attached load_from_redis() method
+2025-12-22 05:01:27,958 - Knowledge - INFO - 🔍 Attempting to load knowledge from Redis...
+2025-12-22 05:01:28,155 - Knowledge - INFO - 🔍 Using derived instance_id for Redis lookup: b9174ov
+2025-12-22 05:01:28,368 - Knowledge - WARNING - ❌ No Redis cache found
+2025-12-22 05:01:28,535 - Knowledge - INFO - 📁 Loading knowledge from disk...
+2025-12-22 05:01:28,747 - Knowledge - INFO - load persisted docinfo: begin
+2025-12-22 05:01:28,931 - Knowledge - INFO - load persisted docinfo: end
+2025-12-22 05:01:29,097 - Knowledge - INFO - 🔍 _load_persisted_knowledge called - checking for Redis optimization
+2025-12-22 05:01:29,259 - Knowledge - INFO - ✅ load_from_redis method found - attempting Redis load
+2025-12-22 05:01:29,421 - Knowledge - INFO - 🔍 Attempting to load knowledge from Redis...
+2025-12-22 05:01:29,599 - Knowledge - INFO - 🔍 Using derived instance_id for Redis lookup: b9174ov
+2025-12-22 05:01:29,770 - Knowledge - WARNING - ❌ No Redis cache found
+2025-12-22 05:01:29,964 - Knowledge - INFO - ❌ Redis load returned False - falling back to file loading
+2025-12-22 05:01:30,128 - Knowledge - INFO - load persisted knowledge: begin
+2025-12-22 05:01:30,464 - Knowledge - INFO - Persisted knowledge files in /app/data/T0015/299123/b9174ov/Word_game_2048/.knowledge have been renamed to use .json
+2025-12-22 05:01:30,644 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:30,802 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:30,976 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/local_storage_manager.js
+2025-12-22 05:01:31,142 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:31,331 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:31,524 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/style/main.css
+2025-12-22 05:01:31,667 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:31,869 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:32,045 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/bind_polyfill.js
+2025-12-22 05:01:32,243 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:32,421 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:32,627 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/html_actuator.js
+2025-12-22 05:01:32,777 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:32,983 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:33,158 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/animframe_polyfill.js
+2025-12-22 05:01:33,371 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:33,539 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:33,715 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/keyboard_input_manager.js
+2025-12-22 05:01:33,857 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:34,056 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:34,259 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/LICENSE.txt
+2025-12-22 05:01:34,466 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:34,652 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:34,828 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/style/fonts/clear-sans.css
+2025-12-22 05:01:34,990 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:35,187 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:35,360 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/tile.js
+2025-12-22 05:01:35,508 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:35,687 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:35,880 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/grid.js
+2025-12-22 05:01:36,066 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:36,244 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:36,427 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/README.md
+2025-12-22 05:01:36,623 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:36,779 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:36,947 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/style/helpers.scss
+2025-12-22 05:01:37,100 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:37,255 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:37,477 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/classlist_polyfill.js
+2025-12-22 05:01:37,634 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:37,843 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:38,049 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/index.html
+2025-12-22 05:01:38,210 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:38,398 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:38,540 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/game_manager.js
+2025-12-22 05:01:38,721 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:38,890 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:39,093 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/application.js
+2025-12-22 05:01:39,268 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:39,447 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:39,638 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/CONTRIBUTING.md
+2025-12-22 05:01:39,782 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-22 05:01:39,938 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f18036bb450>
+2025-12-22 05:01:40,129 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/style/main.scss
+2025-12-22 05:01:40,295 - Knowledge - INFO - Loaded 18 files from persisted knowledge
+2025-12-22 05:01:40,459 - Knowledge - INFO - load persisted knowledge: end
+2025-12-22 05:01:40,628 - Knowledge - INFO - 📁 Disk load complete in 11.92s
+2025-12-22 05:01:40,804 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 160, Duration: 0ms
+2025-12-22 05:01:40,971 - Knowledge - INFO - Worker kw1 created using shared MongoDB connection pool
+2025-12-22 05:01:41,174 - Knowledge - INFO - knowledge worker kw1 start
+2025-12-22 05:01:41,175 - Knowledge - INFO - Worker kw2 created using shared MongoDB connection pool
+2025-12-22 05:01:41,367 - Knowledge - INFO - [kw1] Queue=18, InProgress=0, PendingWorkers=0/1, Completed=0/18 (0.0%)
+2025-12-22 05:01:41,482 - Knowledge - INFO - knowledge worker kw2 start
+2025-12-22 05:01:41,483 - Knowledge - INFO - Worker kw3 created using shared MongoDB connection pool
+2025-12-22 05:01:41,564 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=18, active_workers=0/2
+2025-12-22 05:01:41,653 - Knowledge - INFO - [kw2] Queue=18, InProgress=0, PendingWorkers=0/2, Completed=0/18 (0.0%)
+2025-12-22 05:01:41,738 - Knowledge - INFO - knowledge worker kw3 start
+2025-12-22 05:01:41,738 - Knowledge - INFO - Worker kw4 created using shared MongoDB connection pool
+2025-12-22 05:01:41,834 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/299123/b9174ov/Word_game_2048/js/local_storage_manager.js
+2025-12-22 05:01:41,915 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=18, active_workers=1/3
+2025-12-22 05:01:42,028 - Knowledge - INFO - [kw3] Queue=14, InProgress=0, PendingWorkers=1/3, Completed=0/18 (0.0%)
+2025-12-22 05:01:42,114 - Knowledge - INFO - knowledge worker kw4 start
+2025-12-22 05:01:42,114 - Knowledge - INFO - Worker kw5 created using shared MongoDB connection pool
+2025-12-22 05:01:42,213 - Knowledge - INFO - Fast-tracked /app/data/T0015/299123/b9174ov/Word_game_2048/js/local_storage_manager.js (ext=.js, size=1588)
+2025-12-22 05:01:42,331 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/299123/b9174ov/Word_game_2048/js/animframe_polyfill.js
+2025-12-22 05:01:42,417 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=14, active_workers=2/4
+2025-12-22 05:01:42,540 - Knowledge - INFO - [kw4] Queue=10, InProgress=0, PendingWorkers=2/4, Completed=0/18 (0.0%)
+2025-12-22 05:01:42,620 - Knowledge - INFO - knowledge worker kw5 start
+2025-12-22 05:01:42,621 - Knowledge - INFO - Worker kw6 created using shared MongoDB connection pool
+2025-12-22 05:01:42,701 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/299123/b9174ov/Word_game_2048/style/main.css
+2025-12-22 05:01:42,780 - Knowledge - INFO - Fast-tracked /app/data/T0015/299123/b9174ov/Word_game_2048/js/animframe_polyfill.js (ext=.js, size=890)
+2025-12-22 05:01:42,868 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/299123/b9174ov/Word_game_2048/js/tile.js
+2025-12-22 05:01:42,955 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=10, active_workers=3/5
+2025-12-22 05:01:43,057 - Knowledge - INFO - [kw5] Queue=6, InProgress=0, PendingWorkers=3/5, Completed=0/18 (0.0%)
+2025-12-22 05:01:43,155 - Knowledge - INFO - knowledge worker kw6 start
+2025-12-22 05:01:43,155 - Knowledge - INFO - Worker kw7 created using shared MongoDB connection pool
+2025-12-22 05:01:43,234 - Knowledge - INFO - Fast-tracked /app/data/T0015/299123/b9174ov/Word_game_2048/style/main.css (ext=.css, size=20647)
+2025-12-22 05:01:43,336 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/299123/b9174ov/Word_game_2048/js/keyboard_input_manager.js
+2025-12-22 05:01:43,459 - Knowledge - INFO - Fast-tracked /app/data/T0015/299123/b9174ov/Word_game_2048/js/tile.js (ext=.js, size=594)
+2025-12-22 05:01:43,541 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/299123/b9174ov/Word_game_2048/js/classlist_polyfill.js
+2025-12-22 05:01:43,629 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=6, active_workers=4/6
+2025-12-22 05:01:43,713 - Knowledge - INFO - [kw6] Queue=2, InProgress=0, PendingWorkers=4/6, Completed=0/18 (0.0%)
+2025-12-22 05:01:43,792 - Knowledge - INFO - knowledge worker kw7 start
+2025-12-22 05:01:43,792 - Knowledge - INFO - Worker kw8 created using shared MongoDB connection pool
+2025-12-22 05:01:43,890 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/299123/b9174ov/Word_game_2048/js/bind_polyfill.js
+2025-12-22 05:01:44,005 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/299123/b9174ov/Word_game_2048/LICENSE.txt
+2025-12-22 05:01:44,090 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/299123/b9174ov/Word_game_2048/js/grid.js
+2025-12-22 05:01:44,173 - Knowledge - INFO - Fast-tracked /app/data/T0015/299123/b9174ov/Word_game_2048/js/classlist_polyfill.js (ext=.js, size=1794)
+2025-12-22 05:01:44,285 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/299123/b9174ov/Word_game_2048/CONTRIBUTING.md
+2025-12-22 05:01:44,368 - Knowledge - INFO - Batch sizing: calculated=2, max_allowed=10, queue=2, active_workers=5/7
+2025-12-22 05:01:44,449 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 160, Duration: 0ms
+2025-12-22 05:01:44,554 - Knowledge - INFO - knowledge worker kw8 start
+2025-12-22 05:01:44,554 - Knowledge - INFO - Worker kw9 created using shared MongoDB connection pool
+2025-12-22 05:01:44,657 - Knowledge - INFO - Fast-tracked /app/data/T0015/299123/b9174ov/Word_game_2048/js/bind_polyfill.js (ext=.js, size=220)
+2025-12-22 05:01:44,738 - Knowledge - INFO - Fast-tracked /app/data/T0015/299123/b9174ov/Word_game_2048/LICENSE.txt (ext=.txt, size=1083)
+2025-12-22 05:01:44,859 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/299123/b9174ov/Word_game_2048/README.md
+2025-12-22 05:01:44,933 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/299123/b9174ov/Word_game_2048/index.html
+2025-12-22 05:01:45,046 - Knowledge - INFO - Fast-tracked /app/data/T0015/299123/b9174ov/Word_game_2048/CONTRIBUTING.md (ext=.md, size=1970)
+2025-12-22 05:01:45,273 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 824ms
+2025-12-22 05:01:45,449 - Knowledge - INFO - knowledge worker kw9 start
+2025-12-22 05:01:45,451 - Knowledge - INFO - Worker kw10 created using shared MongoDB connection pool
+2025-12-22 05:01:45,544 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/299123/b9174ov/Word_game_2048/js/html_actuator.js
+2025-12-22 05:01:45,651 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/299123/b9174ov/Word_game_2048/style/fonts/clear-sans.css
+2025-12-22 05:01:45,762 - Knowledge - INFO - Fast-tracked /app/data/T0015/299123/b9174ov/Word_game_2048/README.md (ext=.md, size=2350)
+2025-12-22 05:01:45,890 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/299123/b9174ov/Word_game_2048/js/game_manager.js
+2025-12-22 05:01:45,978 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/299123/b9174ov/Word_game_2048/style/main.scss
+2025-12-22 05:01:46,087 - Knowledge - INFO - Progress: 0.0% | Files: 0/18 | Rate: 0.00 files/sec | Queue: 0
+2025-12-22 05:01:46,283 - Knowledge - INFO - knowledge worker kw10 start
+2025-12-22 05:01:46,284 - Knowledge - INFO - Worker kw11 created using shared MongoDB connection pool
+2025-12-22 05:01:46,473 - Knowledge - INFO - Fast-tracked /app/data/T0015/299123/b9174ov/Word_game_2048/style/fonts/clear-sans.css (ext=.css, size=1078)
+2025-12-22 05:01:46,563 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/299123/b9174ov/Word_game_2048/style/helpers.scss
+2025-12-22 05:01:46,642 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/299123/b9174ov/Word_game_2048/js/application.js
+2025-12-22 05:01:46,715 - Knowledge - INFO - Fast-tracked /app/data/T0015/299123/b9174ov/Word_game_2048/style/main.scss (ext=.scss, size=10404)
+2025-12-22 05:01:46,965 - Knowledge - INFO - knowledge worker kw11 start
+2025-12-22 05:01:46,966 - Knowledge - INFO - Worker kw12 created using shared MongoDB connection pool
+2025-12-22 05:01:47,179 - Knowledge - INFO - Fast-tracked /app/data/T0015/299123/b9174ov/Word_game_2048/style/helpers.scss (ext=.scss, size=1679)
+2025-12-22 05:01:47,261 - Knowledge - INFO - Fast-tracked /app/data/T0015/299123/b9174ov/Word_game_2048/js/application.js (ext=.js, size=197)
+2025-12-22 05:01:47,346 - Knowledge - INFO - Processing batch of 2 files
+2025-12-22 05:01:47,541 - Knowledge - INFO - knowledge worker kw12 start
+2025-12-22 05:01:47,542 - Knowledge - INFO - Worker kw13 created using shared MongoDB connection pool
+2025-12-22 05:01:47,612 - Knowledge - INFO - Fast-tracked /app/data/T0015/299123/b9174ov/Word_game_2048/js/grid.js (small file (2526 bytes))
+2025-12-22 05:01:47,798 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/CONTRIBUTING.md
+2025-12-22 05:01:47,892 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 285, Duration: 0ms
+2025-12-22 05:01:47,982 - Knowledge - INFO - knowledge worker kw13 start
+2025-12-22 05:01:47,983 - Knowledge - INFO - Worker kw14 created using shared MongoDB connection pool
+2025-12-22 05:01:48,193 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/style/main.scss
+2025-12-22 05:01:48,300 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 409ms
+2025-12-22 05:01:48,508 - Knowledge - INFO - knowledge worker kw14 start
+2025-12-22 05:01:48,509 - Knowledge - INFO - Worker kw15 created using shared MongoDB connection pool
+2025-12-22 05:01:48,706 - Knowledge - INFO - Progress: 11.1% | Files: 3/18 | Rate: 0.05 files/sec | Queue: 0
+2025-12-22 05:01:48,782 - Knowledge - INFO - Processing batch of 4 files
+2025-12-22 05:01:48,916 - Knowledge - INFO - knowledge worker kw15 start
+2025-12-22 05:01:48,917 - Knowledge - INFO - Worker kw16 created using shared MongoDB connection pool
+2025-12-22 05:01:49,122 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/tile.js
+2025-12-22 05:01:49,347 - Knowledge - INFO - knowledge worker kw16 start
+2025-12-22 05:01:49,348 - Knowledge - INFO - Worker kw17 created using shared MongoDB connection pool
+2025-12-22 05:01:49,480 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/grid.js
+2025-12-22 05:01:49,722 - Knowledge - INFO - knowledge worker kw17 start
+2025-12-22 05:01:49,723 - Knowledge - INFO - Worker kw18 created using shared MongoDB connection pool
+2025-12-22 05:01:49,823 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/README.md
+2025-12-22 05:01:50,012 - Knowledge - INFO - knowledge worker kw18 start
+2025-12-22 05:01:50,128 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/style/helpers.scss
+2025-12-22 05:01:51,054 - Knowledge - INFO - [LLM_CALL] Completed: index.html:chunk1, Duration: 3347ms, PromptTokens: 2996, CompletionTokens: 59, Cost: $0.00032
+2025-12-22 05:01:51,236 - Knowledge - INFO - done ingest for /app/data/T0015/299123/b9174ov/Word_game_2048/index.html
+2025-12-22 05:01:52,090 - Knowledge - INFO - [LLM_CALL] Completed: html_actuator.js:chunk1, Duration: 5690ms, PromptTokens: 2618, CompletionTokens: 678, Cost: $0.00053
+2025-12-22 05:01:52,315 - Knowledge - INFO - done ingest for /app/data/T0015/299123/b9174ov/Word_game_2048/js/html_actuator.js
+2025-12-22 05:01:52,316 - Knowledge - INFO - [LLM_CALL] Completed: keyboard_input_manager.js:chunk1, Duration: 5245ms, PromptTokens: 2874, CompletionTokens: 443, Cost: $0.00046
+2025-12-22 05:01:52,600 - Knowledge - INFO - done ingest for /app/data/T0015/299123/b9174ov/Word_game_2048/js/keyboard_input_manager.js
+2025-12-22 05:01:52,635 - Knowledge - INFO - Processing batch of 4 files
+2025-12-22 05:01:52,848 - Knowledge - INFO - Processing batch of 4 files
+2025-12-22 05:01:52,864 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/local_storage_manager.js
+2025-12-22 05:01:53,044 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/animframe_polyfill.js
+2025-12-22 05:01:53,184 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/style/main.css
+2025-12-22 05:01:53,313 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/keyboard_input_manager.js
+2025-12-22 05:01:53,420 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/bind_polyfill.js
+2025-12-22 05:01:53,533 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/LICENSE.txt
+2025-12-22 05:01:53,635 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/html_actuator.js
+2025-12-22 05:01:53,728 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/style/fonts/clear-sans.css
+2025-12-22 05:01:54,215 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 290, Duration: 0ms
+2025-12-22 05:01:54,399 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 184ms
+2025-12-22 05:01:54,608 - Knowledge - INFO - Progress: 77.8% | Files: 14/18 | Rate: 0.21 files/sec | Queue: 0
+2025-12-22 05:01:57,332 - Knowledge - INFO - [LLM_CALL] Completed: game_manager.js:chunk1, Duration: 8157ms, PromptTokens: 4514, CompletionTokens: 942, Cost: $0.00083
+2025-12-22 05:01:57,495 - Knowledge - INFO - done ingest for /app/data/T0015/299123/b9174ov/Word_game_2048/js/game_manager.js
+2025-12-22 05:01:57,682 - Knowledge - INFO - Processing batch of 4 files
+2025-12-22 05:01:57,864 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/classlist_polyfill.js
+2025-12-22 05:01:58,096 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/index.html
+2025-12-22 05:01:58,275 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/game_manager.js
+2025-12-22 05:01:58,437 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/299123/b9174ov/Word_game_2048/js/application.js
+2025-12-22 05:01:58,908 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 290, Duration: 0ms
+2025-12-22 05:01:59,108 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 201ms
+2025-12-22 05:01:59,332 - Knowledge - INFO - Progress: 100.0% | Files: 18/18 | Rate: 0.25 files/sec | Queue: 0
+2025-12-22 05:01:59,514 - Knowledge - INFO - Knowledge creation complete
+2025-12-22 05:01:59,696 - Knowledge - INFO - ==================================================
+2025-12-22 05:01:59,916 - Knowledge - INFO - KNOWLEDGE GRAPH GENERATION PERFORMANCE SUMMARY
+2025-12-22 05:02:00,109 - Knowledge - INFO - ==================================================
+2025-12-22 05:02:00,281 - Knowledge - INFO - Total processing time: 71.87 seconds (1.20 minutes)
+2025-12-22 05:02:00,485 - Knowledge - INFO - Files processed: 0
+2025-12-22 05:02:00,657 - Knowledge - INFO - Processing rate: 0.00 files/second
+2025-12-22 05:02:00,828 - Knowledge - INFO - 
+[TIME_BREAKDOWN]
+2025-12-22 05:02:01,051 - Knowledge - INFO - File Reading: 0.00s (0.0%)
+2025-12-22 05:02:01,250 - Knowledge - INFO - LLM Processing: 22.44s (31.2%)
+2025-12-22 05:02:01,433 - Knowledge - INFO - MongoDB Operations: 1.31s (1.8%)
+2025-12-22 05:02:01,586 - Knowledge - INFO - Redis Operations: 5.12s (7.1%)
+2025-12-22 05:02:01,739 - Knowledge - INFO - WebSocket Communication: 1.62s (2.3%)
+2025-12-22 05:02:01,933 - Knowledge - INFO - Other Overhead: 41.37s (57.6%)
+2025-12-22 05:02:02,117 - Knowledge - INFO - 
+[LLM_STATS]
+2025-12-22 05:02:02,311 - Knowledge - INFO - Total LLM calls: 4
+2025-12-22 05:02:02,491 - Knowledge - INFO - Average LLM response time: 5610ms
+2025-12-22 05:02:02,651 - Knowledge - INFO - Average prompt tokens: 3250.5
+2025-12-22 05:02:02,815 - Knowledge - INFO - Average completion tokens: 530.5
+2025-12-22 05:02:02,986 - Knowledge - INFO - Total prompt tokens: 13002
+2025-12-22 05:02:03,206 - Knowledge - INFO - Total completion tokens: 2122
+2025-12-22 05:02:03,378 - Knowledge - INFO - Total LLM cost: $0.0021
+2025-12-22 05:02:03,545 - Knowledge - INFO - 
+[DATABASE_STATS]
+2025-12-22 05:02:03,707 - Knowledge - INFO - MongoDB operations: 18
+2025-12-22 05:02:03,887 - Knowledge - INFO -   persist: 18
+2025-12-22 05:02:04,068 - Knowledge - INFO - Redis operations: 18
+2025-12-22 05:02:04,244 - Knowledge - INFO -   store_embedding: 18
+2025-12-22 05:02:04,452 - Knowledge - INFO - 
+[COMMUNICATION_STATS]
+2025-12-22 05:02:04,623 - Knowledge - INFO - WebSocket messages sent: 9
+2025-12-22 05:02:04,827 - Knowledge - INFO - Average message size: 131.7 bytes
+2025-12-22 05:02:05,002 - Knowledge - INFO - 
+[WORKER_STATS]
+2025-12-22 05:02:05,179 - Knowledge - INFO - 
+[FILE_TYPE_STATS]
+2025-12-22 05:02:05,353 - Knowledge - INFO - 
+[SLOWEST_FILES]
+2025-12-22 05:02:05,515 - Knowledge - INFO - ==================================================
+2025-12-22 05:02:05,674 - Knowledge - INFO - ==================================================
+2025-12-22 05:02:05,828 - Knowledge - INFO - KNOWLEDGE GRAPH GENERATION PERFORMANCE SUMMARY
+2025-12-22 05:02:06,044 - Knowledge - INFO - ==================================================
+2025-12-22 05:02:06,245 - Knowledge - INFO - Total processing time: 77.88 seconds (1.30 minutes)
+2025-12-22 05:02:06,435 - Knowledge - INFO - Files processed: 18 of 18
+2025-12-22 05:02:06,589 - Knowledge - INFO - Processing rate: 0.23 files/second
+2025-12-22 05:02:06,752 - Knowledge - INFO - WebSocket messages sent: 4
+2025-12-22 05:02:06,920 - Knowledge - INFO - MongoDB operations: 18
+2025-12-22 05:02:07,105 - Knowledge - INFO - Average MongoDB ops per file: 1.00
+2025-12-22 05:02:07,313 - Knowledge - INFO - LLM costs: $0.0021
+2025-12-22 05:02:07,497 - Knowledge - INFO - Prompt tokens: 13002
+2025-12-22 05:02:07,685 - Knowledge - INFO - Completion tokens: 2122
+2025-12-22 05:02:07,862 - Knowledge - INFO - Updating org costs, total cost: 0.002149
+2025-12-22 05:02:09,042 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 287, Duration: 0ms
+2025-12-22 05:02:09,265 - Knowledge - INFO - Saving knowledge to Redis...
+2025-12-22 05:02:09,450 - Knowledge - INFO - Knowledge saved to Redis successfully
+2025-12-23 07:16:52,609 - Knowledge - INFO - Created shared MongoDB connection pool
+2025-12-23 07:16:52,609 - Knowledge - INFO - Starting Knowledge Graph processing with 20 threads
+2025-12-23 07:16:52,613 - Knowledge - INFO - Initial configuration: chunk_size=65536, max_cache_size=500
+2025-12-23 07:16:52,613 - Knowledge - INFO - Knowledge Graph concurrency configuration: workers=20, max_batch_size=10, max_concurrent_llm_calls=50
+2025-12-23 07:16:53,343 - Knowledge - INFO - 🔍 _load_persisted_knowledge called - checking for Redis optimization
+2025-12-23 07:16:53,345 - Knowledge - WARNING - ❌ load_from_redis method not found - Redis support not attached
+2025-12-23 07:16:53,347 - Knowledge - INFO - load persisted knowledge: begin
+2025-12-23 07:16:53,542 - Knowledge - INFO - Persisted knowledge files in /app/data/T0002/190585/b8039m2/Word_game_2048/.knowledge have been renamed to use .json
+2025-12-23 07:16:53,550 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,550 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,552 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/local_storage_manager.js
+2025-12-23 07:16:53,555 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,555 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,557 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/style/main.css
+2025-12-23 07:16:53,560 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,560 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,562 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/bind_polyfill.js
+2025-12-23 07:16:53,565 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,565 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,567 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/html_actuator.js
+2025-12-23 07:16:53,570 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,570 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,572 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/animframe_polyfill.js
+2025-12-23 07:16:53,575 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,576 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,578 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/keyboard_input_manager.js
+2025-12-23 07:16:53,581 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,581 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,583 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/LICENSE.txt
+2025-12-23 07:16:53,586 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,586 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,589 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/style/fonts/clear-sans.css
+2025-12-23 07:16:53,593 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,593 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,595 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/tile.js
+2025-12-23 07:16:53,598 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,598 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,600 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/grid.js
+2025-12-23 07:16:53,603 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,603 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,605 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/README.md
+2025-12-23 07:16:53,608 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,608 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,610 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/style/helpers.scss
+2025-12-23 07:16:53,613 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,613 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,615 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/classlist_polyfill.js
+2025-12-23 07:16:53,618 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,618 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,620 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/index.html
+2025-12-23 07:16:53,623 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,623 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,625 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/game_manager.js
+2025-12-23 07:16:53,627 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,628 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,631 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/application.js
+2025-12-23 07:16:53,633 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,633 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,635 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/CONTRIBUTING.md
+2025-12-23 07:16:53,638 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,638 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,640 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/style/main.scss
+2025-12-23 07:16:53,641 - Knowledge - INFO - Loaded 18 files from persisted knowledge
+2025-12-23 07:16:53,641 - Knowledge - INFO - load persisted knowledge: end
+2025-12-23 07:16:53,649 - Knowledge - INFO - Redis support added with prefix knowledge:b8039m2:
+2025-12-23 07:16:53,687 - Knowledge - INFO - Starting knowledge initialization for ID: G3VHcS-b8039m2
+2025-12-23 07:16:53,687 - Knowledge - INFO - 🔍 Checking Redis for build_id: b8039m2
+2025-12-23 07:16:53,687 - Knowledge - INFO - 🔍 Full session ID: G3VHcS-b8039m2
+2025-12-23 07:16:53,688 - Knowledge - INFO - 🔍 Redis prefix will be: knowledge:b8039m2:
+2025-12-23 07:16:53,688 - Knowledge - INFO - 🔍 Using attached load_from_redis() method
+2025-12-23 07:16:53,688 - Knowledge - INFO - 🔍 Attempting to load knowledge from Redis...
+2025-12-23 07:16:53,689 - Knowledge - INFO - 🔍 Using derived instance_id for Redis lookup: b8039m2
+2025-12-23 07:16:53,694 - Knowledge - WARNING - ❌ No Redis cache found
+2025-12-23 07:16:53,698 - Knowledge - INFO - 📁 Loading knowledge from disk...
+2025-12-23 07:16:53,748 - Knowledge - INFO - load persisted docinfo: begin
+2025-12-23 07:16:53,751 - Knowledge - INFO - load persisted docinfo: end
+2025-12-23 07:16:53,751 - Knowledge - INFO - 🔍 _load_persisted_knowledge called - checking for Redis optimization
+2025-12-23 07:16:53,751 - Knowledge - INFO - ✅ load_from_redis method found - attempting Redis load
+2025-12-23 07:16:53,752 - Knowledge - INFO - 🔍 Attempting to load knowledge from Redis...
+2025-12-23 07:16:53,752 - Knowledge - INFO - 🔍 Using derived instance_id for Redis lookup: b8039m2
+2025-12-23 07:16:53,757 - Knowledge - WARNING - ❌ No Redis cache found
+2025-12-23 07:16:53,757 - Knowledge - INFO - ❌ Redis load returned False - falling back to file loading
+2025-12-23 07:16:53,757 - Knowledge - INFO - load persisted knowledge: begin
+2025-12-23 07:16:53,761 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,761 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,761 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/local_storage_manager.js
+2025-12-23 07:16:53,763 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,764 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,764 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/style/main.css
+2025-12-23 07:16:53,766 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,766 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,767 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/bind_polyfill.js
+2025-12-23 07:16:53,770 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,770 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,770 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/html_actuator.js
+2025-12-23 07:16:53,772 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,773 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,773 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/animframe_polyfill.js
+2025-12-23 07:16:53,775 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,775 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,776 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/keyboard_input_manager.js
+2025-12-23 07:16:53,778 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,778 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,778 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/LICENSE.txt
+2025-12-23 07:16:53,780 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,781 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,781 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/style/fonts/clear-sans.css
+2025-12-23 07:16:53,783 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,783 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,784 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/tile.js
+2025-12-23 07:16:53,785 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,786 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,786 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/grid.js
+2025-12-23 07:16:53,788 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,788 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,789 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/README.md
+2025-12-23 07:16:53,791 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,791 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,792 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/style/helpers.scss
+2025-12-23 07:16:53,794 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,794 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,794 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/classlist_polyfill.js
+2025-12-23 07:16:53,796 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,796 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,797 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/index.html
+2025-12-23 07:16:53,799 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,799 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,799 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/game_manager.js
+2025-12-23 07:16:53,801 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,802 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,802 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/application.js
+2025-12-23 07:16:53,804 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,804 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,805 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/CONTRIBUTING.md
+2025-12-23 07:16:53,807 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-23 07:16:53,807 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fe912dd2a10>
+2025-12-23 07:16:53,808 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/style/main.scss
+2025-12-23 07:16:53,808 - Knowledge - INFO - Loaded 18 files from persisted knowledge
+2025-12-23 07:16:53,808 - Knowledge - INFO - load persisted knowledge: end
+2025-12-23 07:16:53,809 - Knowledge - INFO - 📁 Disk load complete in 0.11s
+2025-12-23 07:16:53,809 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 160, Duration: 0ms
+2025-12-23 07:16:53,812 - Knowledge - INFO - Worker kw1 created using shared MongoDB connection pool
+2025-12-23 07:16:53,812 - Knowledge - INFO - knowledge worker kw1 start
+2025-12-23 07:16:53,813 - Knowledge - INFO - Worker kw2 created using shared MongoDB connection pool
+2025-12-23 07:16:53,813 - Knowledge - INFO - [kw1] Queue=18, InProgress=0, PendingWorkers=0/1, Completed=0/18 (0.0%)
+2025-12-23 07:16:53,814 - Knowledge - INFO - knowledge worker kw2 start
+2025-12-23 07:16:53,814 - Knowledge - INFO - Worker kw3 created using shared MongoDB connection pool
+2025-12-23 07:16:53,814 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=18, active_workers=0/2
+2025-12-23 07:16:53,815 - Knowledge - INFO - [kw2] Queue=18, InProgress=0, PendingWorkers=0/2, Completed=0/18 (0.0%)
+2025-12-23 07:16:53,815 - Knowledge - INFO - knowledge worker kw3 start
+2025-12-23 07:16:53,816 - Knowledge - INFO - Worker kw4 created using shared MongoDB connection pool
+2025-12-23 07:16:53,816 - Knowledge - INFO - Worker kw1 processing /app/data/T0002/190585/b8039m2/Word_game_2048/js/local_storage_manager.js
+2025-12-23 07:16:53,817 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=18, active_workers=1/3
+2025-12-23 07:16:53,818 - Knowledge - INFO - knowledge worker kw4 start
+2025-12-23 07:16:53,818 - Knowledge - INFO - [kw3] Queue=14, InProgress=0, PendingWorkers=1/3, Completed=0/18 (0.0%)
+2025-12-23 07:16:53,818 - Knowledge - INFO - Worker kw5 created using shared MongoDB connection pool
+2025-12-23 07:16:53,819 - Knowledge - INFO - Worker kw2 processing /app/data/T0002/190585/b8039m2/Word_game_2048/js/animframe_polyfill.js
+2025-12-23 07:16:53,819 - Knowledge - INFO - Fast-tracked /app/data/T0002/190585/b8039m2/Word_game_2048/js/local_storage_manager.js (ext=.js, size=1588)
+2025-12-23 07:16:53,820 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=14, active_workers=2/4
+2025-12-23 07:16:53,821 - Knowledge - INFO - [kw4] Queue=10, InProgress=0, PendingWorkers=2/4, Completed=0/18 (0.0%)
+2025-12-23 07:16:53,821 - Knowledge - INFO - knowledge worker kw5 start
+2025-12-23 07:16:53,821 - Knowledge - INFO - Worker kw6 created using shared MongoDB connection pool
+2025-12-23 07:16:53,822 - Knowledge - INFO - Fast-tracked /app/data/T0002/190585/b8039m2/Word_game_2048/js/animframe_polyfill.js (ext=.js, size=890)
+2025-12-23 07:16:53,822 - Knowledge - INFO - Worker kw1 processing /app/data/T0002/190585/b8039m2/Word_game_2048/style/main.css
+2025-12-23 07:16:53,823 - Knowledge - INFO - Worker kw3 processing /app/data/T0002/190585/b8039m2/Word_game_2048/js/tile.js
+2025-12-23 07:16:53,823 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=10, active_workers=3/5
+2025-12-23 07:16:53,824 - Knowledge - INFO - knowledge worker kw6 start
+2025-12-23 07:16:53,824 - Knowledge - INFO - Worker kw2 processing /app/data/T0002/190585/b8039m2/Word_game_2048/js/keyboard_input_manager.js
+2025-12-23 07:16:53,824 - Knowledge - INFO - Worker kw7 created using shared MongoDB connection pool
+2025-12-23 07:16:53,826 - Knowledge - INFO - Fast-tracked /app/data/T0002/190585/b8039m2/Word_game_2048/js/tile.js (ext=.js, size=594)
+2025-12-23 07:16:53,826 - Knowledge - INFO - Worker kw4 processing /app/data/T0002/190585/b8039m2/Word_game_2048/js/classlist_polyfill.js
+2025-12-23 07:16:53,827 - Knowledge - INFO - Fast-tracked /app/data/T0002/190585/b8039m2/Word_game_2048/style/main.css (ext=.css, size=20647)
+2025-12-23 07:16:53,828 - Knowledge - INFO - Worker kw2 processing /app/data/T0002/190585/b8039m2/Word_game_2048/LICENSE.txt
+2025-12-23 07:16:53,828 - Knowledge - INFO - knowledge worker kw7 start
+2025-12-23 07:16:53,828 - Knowledge - INFO - Worker kw8 created using shared MongoDB connection pool
+2025-12-23 07:16:53,829 - Knowledge - INFO - Worker kw3 processing /app/data/T0002/190585/b8039m2/Word_game_2048/js/grid.js
+2025-12-23 07:16:53,830 - Knowledge - INFO - Fast-tracked /app/data/T0002/190585/b8039m2/Word_game_2048/js/classlist_polyfill.js (ext=.js, size=1794)
+2025-12-23 07:16:53,830 - Knowledge - INFO - Worker kw1 processing /app/data/T0002/190585/b8039m2/Word_game_2048/js/bind_polyfill.js
+2025-12-23 07:16:53,831 - Knowledge - INFO - Fast-tracked /app/data/T0002/190585/b8039m2/Word_game_2048/LICENSE.txt (ext=.txt, size=1083)
+2025-12-23 07:16:53,831 - Knowledge - INFO - knowledge worker kw8 start
+2025-12-23 07:16:53,832 - Knowledge - INFO - Worker kw9 created using shared MongoDB connection pool
+2025-12-23 07:16:53,832 - Knowledge - INFO - Worker kw3 processing /app/data/T0002/190585/b8039m2/Word_game_2048/README.md
+2025-12-23 07:16:53,832 - Knowledge - INFO - Worker kw4 processing /app/data/T0002/190585/b8039m2/Word_game_2048/index.html
+2025-12-23 07:16:53,833 - Knowledge - INFO - Worker kw2 processing /app/data/T0002/190585/b8039m2/Word_game_2048/style/fonts/clear-sans.css
+2025-12-23 07:16:53,833 - Knowledge - INFO - Fast-tracked /app/data/T0002/190585/b8039m2/Word_game_2048/js/bind_polyfill.js (ext=.js, size=220)
+2025-12-23 07:16:53,834 - Knowledge - INFO - knowledge worker kw9 start
+2025-12-23 07:16:53,834 - Knowledge - INFO - Worker kw10 created using shared MongoDB connection pool
+2025-12-23 07:16:53,835 - Knowledge - INFO - Fast-tracked /app/data/T0002/190585/b8039m2/Word_game_2048/README.md (ext=.md, size=2350)
+2025-12-23 07:16:53,835 - Knowledge - INFO - Worker kw4 processing /app/data/T0002/190585/b8039m2/Word_game_2048/js/game_manager.js
+2025-12-23 07:16:53,836 - Knowledge - INFO - Worker kw1 processing /app/data/T0002/190585/b8039m2/Word_game_2048/js/html_actuator.js
+2025-12-23 07:16:53,836 - Knowledge - INFO - Fast-tracked /app/data/T0002/190585/b8039m2/Word_game_2048/style/fonts/clear-sans.css (ext=.css, size=1078)
+2025-12-23 07:16:53,837 - Knowledge - INFO - knowledge worker kw10 start
+2025-12-23 07:16:53,837 - Knowledge - INFO - Worker kw3 processing /app/data/T0002/190585/b8039m2/Word_game_2048/style/helpers.scss
+2025-12-23 07:16:53,837 - Knowledge - INFO - Worker kw11 created using shared MongoDB connection pool
+2025-12-23 07:16:53,839 - Knowledge - INFO - [kw5] Queue=2, InProgress=0, PendingWorkers=4/10, Completed=0/18 (0.0%)
+2025-12-23 07:16:53,839 - Knowledge - INFO - [kw9] Queue=2, InProgress=0, PendingWorkers=4/10, Completed=0/18 (0.0%)
+2025-12-23 07:16:53,841 - Knowledge - INFO - [kw6] Queue=2, InProgress=0, PendingWorkers=4/10, Completed=0/18 (0.0%)
+2025-12-23 07:16:53,841 - Knowledge - INFO - Fast-tracked /app/data/T0002/190585/b8039m2/Word_game_2048/style/helpers.scss (ext=.scss, size=1679)
+2025-12-23 07:16:53,842 - Knowledge - INFO - [kw7] Queue=2, InProgress=0, PendingWorkers=4/10, Completed=0/18 (0.0%)
+2025-12-23 07:16:53,843 - Knowledge - INFO - [kw10] Queue=2, InProgress=0, PendingWorkers=4/10, Completed=0/18 (0.0%)
+2025-12-23 07:16:53,843 - Knowledge - INFO - [kw8] Queue=2, InProgress=0, PendingWorkers=4/10, Completed=0/18 (0.0%)
+2025-12-23 07:16:53,844 - Knowledge - INFO - Worker kw4 processing /app/data/T0002/190585/b8039m2/Word_game_2048/js/application.js
+2025-12-23 07:16:53,845 - Knowledge - INFO - knowledge worker kw11 start
+2025-12-23 07:16:53,846 - Knowledge - INFO - Batch sizing: calculated=2, max_allowed=10, queue=2, active_workers=4/10
+2025-12-23 07:16:53,846 - Knowledge - INFO - Worker kw12 created using shared MongoDB connection pool
+2025-12-23 07:16:53,847 - Knowledge - INFO - Batch sizing: calculated=2, max_allowed=10, queue=2, active_workers=4/11
+2025-12-23 07:16:53,848 - Knowledge - INFO - Batch sizing: calculated=2, max_allowed=10, queue=2, active_workers=4/11
+2025-12-23 07:16:53,848 - Knowledge - INFO - Batch sizing: calculated=2, max_allowed=10, queue=2, active_workers=4/11
+2025-12-23 07:16:53,849 - Knowledge - INFO - Batch sizing: calculated=2, max_allowed=10, queue=2, active_workers=4/11
+2025-12-23 07:16:53,850 - Knowledge - INFO - Batch sizing: calculated=2, max_allowed=10, queue=2, active_workers=4/11
+2025-12-23 07:16:53,851 - Knowledge - INFO - Fast-tracked /app/data/T0002/190585/b8039m2/Word_game_2048/js/grid.js (small file (2526 bytes))
+2025-12-23 07:16:53,851 - Knowledge - INFO - Fast-tracked /app/data/T0002/190585/b8039m2/Word_game_2048/js/application.js (ext=.js, size=197)
+2025-12-23 07:16:53,852 - Knowledge - INFO - Worker kw5 processing /app/data/T0002/190585/b8039m2/Word_game_2048/CONTRIBUTING.md
+2025-12-23 07:16:53,853 - Knowledge - INFO - knowledge worker kw12 start
+2025-12-23 07:16:53,853 - Knowledge - INFO - Worker kw13 created using shared MongoDB connection pool
+2025-12-23 07:16:53,854 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 160, Duration: 0ms
+2025-12-23 07:16:53,930 - Knowledge - INFO - Fast-tracked /app/data/T0002/190585/b8039m2/Word_game_2048/CONTRIBUTING.md (ext=.md, size=1970)
+2025-12-23 07:16:53,934 - Knowledge - INFO - knowledge worker kw13 start
+2025-12-23 07:16:53,935 - Knowledge - INFO - Worker kw14 created using shared MongoDB connection pool
+2025-12-23 07:16:53,937 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 83ms
+2025-12-23 07:16:53,937 - Knowledge - INFO - Worker kw5 processing /app/data/T0002/190585/b8039m2/Word_game_2048/style/main.scss
+2025-12-23 07:16:53,940 - Knowledge - INFO - knowledge worker kw14 start
+2025-12-23 07:16:53,940 - Knowledge - INFO - Worker kw15 created using shared MongoDB connection pool
+2025-12-23 07:16:53,940 - Knowledge - INFO - Progress: 0.0% | Files: 1/18 | Rate: 0.77 files/sec | Queue: 0
+2025-12-23 07:16:53,945 - Knowledge - INFO - Fast-tracked /app/data/T0002/190585/b8039m2/Word_game_2048/style/main.scss (ext=.scss, size=10404)
+2025-12-23 07:16:53,949 - Knowledge - INFO - knowledge worker kw15 start
+2025-12-23 07:16:53,949 - Knowledge - INFO - Worker kw16 created using shared MongoDB connection pool
+2025-12-23 07:16:53,951 - Knowledge - INFO - knowledge worker kw16 start
+2025-12-23 07:16:53,952 - Knowledge - INFO - Worker kw17 created using shared MongoDB connection pool
+2025-12-23 07:16:53,954 - Knowledge - INFO - knowledge worker kw17 start
+2025-12-23 07:16:53,959 - Knowledge - INFO - Worker kw18 created using shared MongoDB connection pool
+2025-12-23 07:16:53,962 - Knowledge - INFO - knowledge worker kw18 start
+2025-12-23 07:16:53,968 - Knowledge - INFO - Processing batch of 2 files
+2025-12-23 07:16:53,968 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/CONTRIBUTING.md
+2025-12-23 07:16:53,971 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/style/main.scss
+2025-12-23 07:16:54,577 - Knowledge - INFO - Processing batch of 4 files
+2025-12-23 07:16:54,577 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/tile.js
+2025-12-23 07:16:54,631 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/grid.js
+2025-12-23 07:16:54,637 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/README.md
+2025-12-23 07:16:54,644 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/style/helpers.scss
+2025-12-23 07:16:55,569 - Knowledge - INFO - [LLM_CALL] Completed: index.html:chunk1, Duration: 1632ms, PromptTokens: 2998, CompletionTokens: 59, Cost: $0.00032
+2025-12-23 07:16:55,576 - Knowledge - INFO - done ingest for /app/data/T0002/190585/b8039m2/Word_game_2048/index.html
+2025-12-23 07:16:58,259 - Knowledge - INFO - [LLM_CALL] Completed: keyboard_input_manager.js:chunk1, Duration: 4414ms, PromptTokens: 2876, CompletionTokens: 455, Cost: $0.00047
+2025-12-23 07:16:58,261 - Knowledge - INFO - done ingest for /app/data/T0002/190585/b8039m2/Word_game_2048/js/keyboard_input_manager.js
+2025-12-23 07:16:58,897 - Knowledge - INFO - Processing batch of 4 files
+2025-12-23 07:16:58,901 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/animframe_polyfill.js
+2025-12-23 07:16:59,085 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/keyboard_input_manager.js
+2025-12-23 07:16:59,187 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/LICENSE.txt
+2025-12-23 07:16:59,204 - Knowledge - INFO - [LLM_CALL] Completed: html_actuator.js:chunk1, Duration: 5356ms, PromptTokens: 2620, CompletionTokens: 681, Cost: $0.00053
+2025-12-23 07:16:59,204 - Knowledge - INFO - done ingest for /app/data/T0002/190585/b8039m2/Word_game_2048/js/html_actuator.js
+2025-12-23 07:16:59,635 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/style/fonts/clear-sans.css
+2025-12-23 07:16:59,996 - Knowledge - INFO - [LLM_CALL] Completed: game_manager.js:chunk1, Duration: 6045ms, PromptTokens: 4516, CompletionTokens: 972, Cost: $0.00084
+2025-12-23 07:16:59,997 - Knowledge - INFO - done ingest for /app/data/T0002/190585/b8039m2/Word_game_2048/js/game_manager.js
+2025-12-23 07:16:59,998 - Knowledge - INFO - Processing batch of 4 files
+2025-12-23 07:17:00,010 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/local_storage_manager.js
+2025-12-23 07:17:00,089 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/style/main.css
+2025-12-23 07:17:00,091 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/bind_polyfill.js
+2025-12-23 07:17:00,092 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/html_actuator.js
+2025-12-23 07:17:00,284 - Knowledge - INFO - Processing batch of 4 files
+2025-12-23 07:17:00,285 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/classlist_polyfill.js
+2025-12-23 07:17:00,351 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/index.html
+2025-12-23 07:17:00,528 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/game_manager.js
+2025-12-23 07:17:00,532 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 244, Duration: 0ms
+2025-12-23 07:17:00,533 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/190585/b8039m2/Word_game_2048/js/application.js
+2025-12-23 07:17:00,533 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 1ms
+2025-12-23 07:17:00,534 - Knowledge - INFO - Progress: 100.0% | Files: 18/18 | Rate: 2.27 files/sec | Queue: 0
+2025-12-23 07:17:00,855 - Knowledge - INFO - Knowledge creation complete
+2025-12-23 07:17:00,855 - Knowledge - INFO - ==================================================
+2025-12-23 07:17:00,855 - Knowledge - INFO - KNOWLEDGE GRAPH GENERATION PERFORMANCE SUMMARY
+2025-12-23 07:17:00,856 - Knowledge - INFO - ==================================================
+2025-12-23 07:17:00,857 - Knowledge - INFO - Total processing time: 8.25 seconds (0.14 minutes)
+2025-12-23 07:17:00,857 - Knowledge - INFO - Files processed: 0
+2025-12-23 07:17:00,858 - Knowledge - INFO - Processing rate: 0.00 files/second
+2025-12-23 07:17:00,858 - Knowledge - INFO - 
+[TIME_BREAKDOWN]
+2025-12-23 07:17:00,858 - Knowledge - INFO - File Reading: 0.00s (0.0%)
+2025-12-23 07:17:00,859 - Knowledge - INFO - LLM Processing: 17.45s (211.6%)
+2025-12-23 07:17:00,859 - Knowledge - INFO - MongoDB Operations: 0.00s (0.0%)
+2025-12-23 07:17:00,859 - Knowledge - INFO - Redis Operations: 0.00s (0.0%)
+2025-12-23 07:17:00,859 - Knowledge - INFO - WebSocket Communication: 0.08s (1.0%)
+2025-12-23 07:17:00,860 - Knowledge - INFO - 
+[LLM_STATS]
+2025-12-23 07:17:00,860 - Knowledge - INFO - Total LLM calls: 4
+2025-12-23 07:17:00,861 - Knowledge - INFO - Average LLM response time: 4362ms
+2025-12-23 07:17:00,861 - Knowledge - INFO - Average prompt tokens: 3252.5
+2025-12-23 07:17:00,861 - Knowledge - INFO - Average completion tokens: 541.8
+2025-12-23 07:17:00,861 - Knowledge - INFO - Total prompt tokens: 13010
+2025-12-23 07:17:00,862 - Knowledge - INFO - Total completion tokens: 2167
+2025-12-23 07:17:00,862 - Knowledge - INFO - Total LLM cost: $0.0022
+2025-12-23 07:17:00,862 - Knowledge - INFO - 
+[DATABASE_STATS]
+2025-12-23 07:17:00,863 - Knowledge - INFO - MongoDB operations: 0
+2025-12-23 07:17:00,863 - Knowledge - INFO - Redis operations: 0
+2025-12-23 07:17:00,863 - Knowledge - INFO - 
+[COMMUNICATION_STATS]
+2025-12-23 07:17:00,863 - Knowledge - INFO - WebSocket messages sent: 5
+2025-12-23 07:17:00,864 - Knowledge - INFO - Average message size: 112.8 bytes
+2025-12-23 07:17:00,864 - Knowledge - INFO - 
+[WORKER_STATS]
+2025-12-23 07:17:00,864 - Knowledge - INFO - 
+[FILE_TYPE_STATS]
+2025-12-23 07:17:00,864 - Knowledge - INFO - 
+[SLOWEST_FILES]
+2025-12-23 07:17:00,865 - Knowledge - INFO - ==================================================
+2025-12-23 07:17:00,865 - Knowledge - INFO - ==================================================
+2025-12-23 07:17:00,865 - Knowledge - INFO - KNOWLEDGE GRAPH GENERATION PERFORMANCE SUMMARY
+2025-12-23 07:17:00,865 - Knowledge - INFO - ==================================================
+2025-12-23 07:17:00,866 - Knowledge - INFO - Total processing time: 8.31 seconds (0.14 minutes)
+2025-12-23 07:17:00,866 - Knowledge - INFO - Files processed: 18 of 18
+2025-12-23 07:17:00,866 - Knowledge - INFO - Processing rate: 2.17 files/second
+2025-12-23 07:17:00,867 - Knowledge - INFO - WebSocket messages sent: 2
+2025-12-23 07:17:00,867 - Knowledge - INFO - MongoDB operations: 18
+2025-12-23 07:17:00,867 - Knowledge - INFO - Average MongoDB ops per file: 1.00
+2025-12-23 07:17:00,867 - Knowledge - INFO - LLM costs: $0.0022
+2025-12-23 07:17:00,868 - Knowledge - INFO - Prompt tokens: 13010
+2025-12-23 07:17:00,868 - Knowledge - INFO - Completion tokens: 2167
+2025-12-23 07:17:00,868 - Knowledge - INFO - Updating org costs, total cost: 0.0021677999999999997
+2025-12-23 07:17:02,073 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 242, Duration: 0ms
+2025-12-23 07:17:02,075 - Knowledge - INFO - Saving knowledge to Redis...
+2025-12-23 07:17:02,089 - Knowledge - INFO - Knowledge saved to Redis successfully
+2025-12-24 08:57:54,889 - Knowledge - INFO - Created shared MongoDB connection pool
+2025-12-24 08:57:55,201 - Knowledge - INFO - Starting Knowledge Graph processing with 20 threads
+2025-12-24 08:57:55,395 - Knowledge - INFO - Initial configuration: chunk_size=65536, max_cache_size=500
+2025-12-24 08:57:55,546 - Knowledge - INFO - Knowledge Graph concurrency configuration: workers=20, max_batch_size=10, max_concurrent_llm_calls=50
+2025-12-24 08:57:56,627 - Knowledge - INFO - 🔍 _load_persisted_knowledge called - checking for Redis optimization
+2025-12-24 08:57:56,790 - Knowledge - WARNING - ❌ load_from_redis method not found - Redis support not attached
+2025-12-24 08:57:56,940 - Knowledge - INFO - load persisted knowledge: begin
+2025-12-24 08:57:57,405 - Knowledge - INFO - Persisted knowledge files in /app/data/T0015/301621/b64991i/Word_game_2048/.knowledge have been renamed to use .json
+2025-12-24 08:57:57,572 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:57:57,779 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:57:57,979 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/local_storage_manager.js
+2025-12-24 08:57:58,153 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:57:58,357 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:57:58,509 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/style/main.css
+2025-12-24 08:57:58,684 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:57:58,907 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:57:59,092 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/bind_polyfill.js
+2025-12-24 08:57:59,287 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:57:59,474 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:57:59,648 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/html_actuator.js
+2025-12-24 08:57:59,817 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:57:59,964 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:00,162 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/animframe_polyfill.js
+2025-12-24 08:58:00,320 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:00,497 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:00,673 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/keyboard_input_manager.js
+2025-12-24 08:58:00,857 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:01,071 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:01,284 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/LICENSE.txt
+2025-12-24 08:58:01,461 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:01,601 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:01,769 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/style/fonts/clear-sans.css
+2025-12-24 08:58:01,969 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:02,158 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:02,325 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/tile.js
+2025-12-24 08:58:02,499 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:02,674 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:02,838 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/grid.js
+2025-12-24 08:58:03,011 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:03,195 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:03,375 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/README.md
+2025-12-24 08:58:03,580 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:03,799 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:03,995 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/style/helpers.scss
+2025-12-24 08:58:04,185 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:04,345 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:04,500 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/classlist_polyfill.js
+2025-12-24 08:58:04,705 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:04,892 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:05,061 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/index.html
+2025-12-24 08:58:05,248 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:05,410 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:05,608 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/game_manager.js
+2025-12-24 08:58:05,834 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:06,024 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:06,228 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/application.js
+2025-12-24 08:58:06,416 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:06,591 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:06,779 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/CONTRIBUTING.md
+2025-12-24 08:58:06,932 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:07,152 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:07,304 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/style/main.scss
+2025-12-24 08:58:07,492 - Knowledge - INFO - Loaded 18 files from persisted knowledge
+2025-12-24 08:58:07,676 - Knowledge - INFO - load persisted knowledge: end
+2025-12-24 08:58:07,877 - Knowledge - INFO - Redis support added with prefix knowledge:b64991i:
+2025-12-24 08:58:08,107 - Knowledge - INFO - Starting knowledge initialization for ID: TingKA-b64991i
+2025-12-24 08:58:08,270 - Knowledge - INFO - 🔍 Checking Redis for build_id: b64991i
+2025-12-24 08:58:08,450 - Knowledge - INFO - 🔍 Full session ID: TingKA-b64991i
+2025-12-24 08:58:08,633 - Knowledge - INFO - 🔍 Redis prefix will be: knowledge:b64991i:
+2025-12-24 08:58:08,784 - Knowledge - INFO - 🔍 Using attached load_from_redis() method
+2025-12-24 08:58:08,961 - Knowledge - INFO - 🔍 Attempting to load knowledge from Redis...
+2025-12-24 08:58:09,143 - Knowledge - INFO - 🔍 Using derived instance_id for Redis lookup: b64991i
+2025-12-24 08:58:09,379 - Knowledge - WARNING - ❌ No Redis cache found
+2025-12-24 08:58:09,568 - Knowledge - INFO - 📁 Loading knowledge from disk...
+2025-12-24 08:58:09,842 - Knowledge - INFO - load persisted docinfo: begin
+2025-12-24 08:58:10,049 - Knowledge - INFO - load persisted docinfo: end
+2025-12-24 08:58:10,230 - Knowledge - INFO - 🔍 _load_persisted_knowledge called - checking for Redis optimization
+2025-12-24 08:58:10,440 - Knowledge - INFO - ✅ load_from_redis method found - attempting Redis load
+2025-12-24 08:58:10,618 - Knowledge - INFO - 🔍 Attempting to load knowledge from Redis...
+2025-12-24 08:58:10,801 - Knowledge - INFO - 🔍 Using derived instance_id for Redis lookup: b64991i
+2025-12-24 08:58:10,977 - Knowledge - WARNING - ❌ No Redis cache found
+2025-12-24 08:58:11,176 - Knowledge - INFO - ❌ Redis load returned False - falling back to file loading
+2025-12-24 08:58:11,362 - Knowledge - INFO - load persisted knowledge: begin
+2025-12-24 08:58:11,555 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:11,701 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:11,845 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/local_storage_manager.js
+2025-12-24 08:58:11,992 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:12,159 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:12,320 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/style/main.css
+2025-12-24 08:58:12,477 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:12,644 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:12,836 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/bind_polyfill.js
+2025-12-24 08:58:12,990 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:13,204 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:13,343 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/html_actuator.js
+2025-12-24 08:58:13,579 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:13,780 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:13,934 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/animframe_polyfill.js
+2025-12-24 08:58:14,108 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:14,276 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:14,468 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/keyboard_input_manager.js
+2025-12-24 08:58:14,665 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:14,811 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:14,979 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/LICENSE.txt
+2025-12-24 08:58:15,184 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:15,379 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:15,527 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/style/fonts/clear-sans.css
+2025-12-24 08:58:15,742 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:15,929 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:16,108 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/tile.js
+2025-12-24 08:58:16,303 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:16,496 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:16,687 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/grid.js
+2025-12-24 08:58:16,851 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:17,022 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:17,177 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/README.md
+2025-12-24 08:58:17,388 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:17,563 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:17,740 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/style/helpers.scss
+2025-12-24 08:58:17,917 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:18,078 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:18,280 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/classlist_polyfill.js
+2025-12-24 08:58:18,449 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:18,602 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:18,810 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/index.html
+2025-12-24 08:58:18,955 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:19,171 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:19,371 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/game_manager.js
+2025-12-24 08:58:19,522 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:19,676 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:19,889 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/application.js
+2025-12-24 08:58:20,081 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:20,250 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:20,433 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/CONTRIBUTING.md
+2025-12-24 08:58:20,619 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-24 08:58:20,783 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f494c0bbfd0>
+2025-12-24 08:58:20,964 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/style/main.scss
+2025-12-24 08:58:21,154 - Knowledge - INFO - Loaded 18 files from persisted knowledge
+2025-12-24 08:58:21,373 - Knowledge - INFO - load persisted knowledge: end
+2025-12-24 08:58:21,552 - Knowledge - INFO - 📁 Disk load complete in 11.76s
+2025-12-24 08:58:21,800 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 160, Duration: 0ms
+2025-12-24 08:58:21,995 - Knowledge - INFO - Worker kw1 created using shared MongoDB connection pool
+2025-12-24 08:58:22,206 - Knowledge - INFO - knowledge worker kw1 start
+2025-12-24 08:58:22,206 - Knowledge - INFO - Worker kw2 created using shared MongoDB connection pool
+2025-12-24 08:58:22,379 - Knowledge - INFO - [kw1] Queue=18, InProgress=0, PendingWorkers=0/1, Completed=0/18 (0.0%)
+2025-12-24 08:58:22,479 - Knowledge - INFO - knowledge worker kw2 start
+2025-12-24 08:58:22,480 - Knowledge - INFO - Worker kw3 created using shared MongoDB connection pool
+2025-12-24 08:58:22,550 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=18, active_workers=0/2
+2025-12-24 08:58:22,621 - Knowledge - INFO - [kw2] Queue=18, InProgress=0, PendingWorkers=0/2, Completed=0/18 (0.0%)
+2025-12-24 08:58:22,711 - Knowledge - INFO - knowledge worker kw3 start
+2025-12-24 08:58:22,711 - Knowledge - INFO - Worker kw4 created using shared MongoDB connection pool
+2025-12-24 08:58:22,808 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/301621/b64991i/Word_game_2048/js/local_storage_manager.js
+2025-12-24 08:58:22,885 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=18, active_workers=1/3
+2025-12-24 08:58:23,005 - Knowledge - INFO - [kw3] Queue=14, InProgress=0, PendingWorkers=1/3, Completed=0/18 (0.0%)
+2025-12-24 08:58:23,121 - Knowledge - INFO - knowledge worker kw4 start
+2025-12-24 08:58:23,122 - Knowledge - INFO - Worker kw5 created using shared MongoDB connection pool
+2025-12-24 08:58:23,212 - Knowledge - INFO - Fast-tracked /app/data/T0015/301621/b64991i/Word_game_2048/js/local_storage_manager.js (ext=.js, size=1588)
+2025-12-24 08:58:23,290 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/301621/b64991i/Word_game_2048/js/animframe_polyfill.js
+2025-12-24 08:58:23,393 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=14, active_workers=2/4
+2025-12-24 08:58:23,464 - Knowledge - INFO - [kw4] Queue=10, InProgress=0, PendingWorkers=2/4, Completed=0/18 (0.0%)
+2025-12-24 08:58:23,528 - Knowledge - INFO - knowledge worker kw5 start
+2025-12-24 08:58:23,528 - Knowledge - INFO - Worker kw6 created using shared MongoDB connection pool
+2025-12-24 08:58:23,617 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/301621/b64991i/Word_game_2048/style/main.css
+2025-12-24 08:58:23,693 - Knowledge - INFO - Fast-tracked /app/data/T0015/301621/b64991i/Word_game_2048/js/animframe_polyfill.js (ext=.js, size=890)
+2025-12-24 08:58:23,815 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/301621/b64991i/Word_game_2048/js/tile.js
+2025-12-24 08:58:23,902 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=10, active_workers=3/5
+2025-12-24 08:58:23,997 - Knowledge - INFO - [kw5] Queue=6, InProgress=0, PendingWorkers=3/5, Completed=0/18 (0.0%)
+2025-12-24 08:58:24,047 - Knowledge - INFO - knowledge worker kw6 start
+2025-12-24 08:58:24,049 - Knowledge - INFO - Worker kw7 created using shared MongoDB connection pool
+2025-12-24 08:58:24,119 - Knowledge - INFO - Fast-tracked /app/data/T0015/301621/b64991i/Word_game_2048/style/main.css (ext=.css, size=20647)
+2025-12-24 08:58:24,212 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/301621/b64991i/Word_game_2048/js/keyboard_input_manager.js
+2025-12-24 08:58:24,290 - Knowledge - INFO - Fast-tracked /app/data/T0015/301621/b64991i/Word_game_2048/js/tile.js (ext=.js, size=594)
+2025-12-24 08:58:24,399 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/301621/b64991i/Word_game_2048/js/classlist_polyfill.js
+2025-12-24 08:58:24,485 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=6, active_workers=4/6
+2025-12-24 08:58:24,587 - Knowledge - INFO - [kw6] Queue=2, InProgress=0, PendingWorkers=4/6, Completed=0/18 (0.0%)
+2025-12-24 08:58:24,708 - Knowledge - INFO - knowledge worker kw7 start
+2025-12-24 08:58:24,708 - Knowledge - INFO - Worker kw8 created using shared MongoDB connection pool
+2025-12-24 08:58:24,776 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/301621/b64991i/Word_game_2048/js/bind_polyfill.js
+2025-12-24 08:58:24,893 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/301621/b64991i/Word_game_2048/LICENSE.txt
+2025-12-24 08:58:24,988 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/301621/b64991i/Word_game_2048/js/grid.js
+2025-12-24 08:58:25,106 - Knowledge - INFO - Fast-tracked /app/data/T0015/301621/b64991i/Word_game_2048/js/classlist_polyfill.js (ext=.js, size=1794)
+2025-12-24 08:58:25,223 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/301621/b64991i/Word_game_2048/CONTRIBUTING.md
+2025-12-24 08:58:25,299 - Knowledge - INFO - Batch sizing: calculated=2, max_allowed=10, queue=2, active_workers=5/7
+2025-12-24 08:58:25,404 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 160, Duration: 0ms
+2025-12-24 08:58:25,487 - Knowledge - INFO - knowledge worker kw8 start
+2025-12-24 08:58:25,487 - Knowledge - INFO - Worker kw9 created using shared MongoDB connection pool
+2025-12-24 08:58:25,559 - Knowledge - INFO - Fast-tracked /app/data/T0015/301621/b64991i/Word_game_2048/js/bind_polyfill.js (ext=.js, size=220)
+2025-12-24 08:58:25,647 - Knowledge - INFO - Fast-tracked /app/data/T0015/301621/b64991i/Word_game_2048/LICENSE.txt (ext=.txt, size=1083)
+2025-12-24 08:58:25,720 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/301621/b64991i/Word_game_2048/README.md
+2025-12-24 08:58:25,789 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/301621/b64991i/Word_game_2048/index.html
+2025-12-24 08:58:25,950 - Knowledge - INFO - Fast-tracked /app/data/T0015/301621/b64991i/Word_game_2048/CONTRIBUTING.md (ext=.md, size=1970)
+2025-12-24 08:58:26,163 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 759ms
+2025-12-24 08:58:26,425 - Knowledge - INFO - knowledge worker kw9 start
+2025-12-24 08:58:26,428 - Knowledge - INFO - Worker kw10 created using shared MongoDB connection pool
+2025-12-24 08:58:26,527 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/301621/b64991i/Word_game_2048/js/html_actuator.js
+2025-12-24 08:58:26,609 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/301621/b64991i/Word_game_2048/style/fonts/clear-sans.css
+2025-12-24 08:58:26,690 - Knowledge - INFO - Fast-tracked /app/data/T0015/301621/b64991i/Word_game_2048/README.md (ext=.md, size=2350)
+2025-12-24 08:58:26,791 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/301621/b64991i/Word_game_2048/js/game_manager.js
+2025-12-24 08:58:26,851 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/301621/b64991i/Word_game_2048/style/main.scss
+2025-12-24 08:58:26,952 - Knowledge - INFO - Progress: 0.0% | Files: 0/18 | Rate: 0.00 files/sec | Queue: 0
+2025-12-24 08:58:27,154 - Knowledge - INFO - knowledge worker kw10 start
+2025-12-24 08:58:27,154 - Knowledge - INFO - Worker kw11 created using shared MongoDB connection pool
+2025-12-24 08:58:27,338 - Knowledge - INFO - Fast-tracked /app/data/T0015/301621/b64991i/Word_game_2048/style/fonts/clear-sans.css (ext=.css, size=1078)
+2025-12-24 08:58:27,470 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/301621/b64991i/Word_game_2048/style/helpers.scss
+2025-12-24 08:58:27,578 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/301621/b64991i/Word_game_2048/js/application.js
+2025-12-24 08:58:27,660 - Knowledge - INFO - Fast-tracked /app/data/T0015/301621/b64991i/Word_game_2048/style/main.scss (ext=.scss, size=10404)
+2025-12-24 08:58:27,923 - Knowledge - INFO - knowledge worker kw11 start
+2025-12-24 08:58:27,923 - Knowledge - INFO - Worker kw12 created using shared MongoDB connection pool
+2025-12-24 08:58:28,107 - Knowledge - INFO - Fast-tracked /app/data/T0015/301621/b64991i/Word_game_2048/style/helpers.scss (ext=.scss, size=1679)
+2025-12-24 08:58:28,238 - Knowledge - INFO - Fast-tracked /app/data/T0015/301621/b64991i/Word_game_2048/js/application.js (ext=.js, size=197)
+2025-12-24 08:58:28,353 - Knowledge - INFO - Processing batch of 2 files
+2025-12-24 08:58:28,448 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 287, Duration: 0ms
+2025-12-24 08:58:28,721 - Knowledge - INFO - knowledge worker kw12 start
+2025-12-24 08:58:28,722 - Knowledge - INFO - Worker kw13 created using shared MongoDB connection pool
+2025-12-24 08:58:28,802 - Knowledge - INFO - Fast-tracked /app/data/T0015/301621/b64991i/Word_game_2048/js/grid.js (small file (2526 bytes))
+2025-12-24 08:58:28,956 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/CONTRIBUTING.md
+2025-12-24 08:58:29,063 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 615ms
+2025-12-24 08:58:29,268 - Knowledge - INFO - knowledge worker kw13 start
+2025-12-24 08:58:29,268 - Knowledge - INFO - Worker kw14 created using shared MongoDB connection pool
+2025-12-24 08:58:29,512 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/style/main.scss
+2025-12-24 08:58:29,622 - Knowledge - INFO - Progress: 11.1% | Files: 3/18 | Rate: 0.09 files/sec | Queue: 0
+2025-12-24 08:58:29,799 - Knowledge - INFO - Processing batch of 4 files
+2025-12-24 08:58:29,853 - Knowledge - INFO - knowledge worker kw14 start
+2025-12-24 08:58:29,857 - Knowledge - INFO - Worker kw15 created using shared MongoDB connection pool
+2025-12-24 08:58:30,196 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/tile.js
+2025-12-24 08:58:30,388 - Knowledge - INFO - knowledge worker kw15 start
+2025-12-24 08:58:30,389 - Knowledge - INFO - Worker kw16 created using shared MongoDB connection pool
+2025-12-24 08:58:30,494 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/grid.js
+2025-12-24 08:58:30,684 - Knowledge - INFO - knowledge worker kw16 start
+2025-12-24 08:58:30,688 - Knowledge - INFO - Worker kw17 created using shared MongoDB connection pool
+2025-12-24 08:58:30,827 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/README.md
+2025-12-24 08:58:31,021 - Knowledge - INFO - knowledge worker kw17 start
+2025-12-24 08:58:31,022 - Knowledge - INFO - Worker kw18 created using shared MongoDB connection pool
+2025-12-24 08:58:31,101 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/style/helpers.scss
+2025-12-24 08:58:31,369 - Knowledge - INFO - knowledge worker kw18 start
+2025-12-24 08:58:31,687 - Knowledge - INFO - [LLM_CALL] Completed: keyboard_input_manager.js:chunk1, Duration: 3656ms, PromptTokens: 2874, CompletionTokens: 446, Cost: $0.00047
+2025-12-24 08:58:31,868 - Knowledge - INFO - done ingest for /app/data/T0015/301621/b64991i/Word_game_2048/js/keyboard_input_manager.js
+2025-12-24 08:58:31,868 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 289, Duration: 0ms
+2025-12-24 08:58:32,227 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 359ms
+2025-12-24 08:58:32,438 - Knowledge - INFO - Progress: 33.3% | Files: 7/18 | Rate: 0.19 files/sec | Queue: 0
+2025-12-24 08:58:32,440 - Knowledge - INFO - [LLM_CALL] Completed: html_actuator.js:chunk1, Duration: 5189ms, PromptTokens: 2618, CompletionTokens: 623, Cost: $0.00051
+2025-12-24 08:58:32,721 - Knowledge - INFO - done ingest for /app/data/T0015/301621/b64991i/Word_game_2048/js/html_actuator.js
+2025-12-24 08:58:32,722 - Knowledge - INFO - [LLM_CALL] Completed: index.html:chunk1, Duration: 3659ms, PromptTokens: 2996, CompletionTokens: 59, Cost: $0.00032
+2025-12-24 08:58:32,960 - Knowledge - INFO - done ingest for /app/data/T0015/301621/b64991i/Word_game_2048/index.html
+2025-12-24 08:58:32,980 - Knowledge - INFO - Processing batch of 4 files
+2025-12-24 08:58:32,991 - Knowledge - INFO - Processing batch of 4 files
+2025-12-24 08:58:33,307 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/animframe_polyfill.js
+2025-12-24 08:58:33,420 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/local_storage_manager.js
+2025-12-24 08:58:33,682 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/keyboard_input_manager.js
+2025-12-24 08:58:33,738 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/style/main.css
+2025-12-24 08:58:33,897 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/LICENSE.txt
+2025-12-24 08:58:33,978 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/bind_polyfill.js
+2025-12-24 08:58:34,076 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/style/fonts/clear-sans.css
+2025-12-24 08:58:34,228 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/html_actuator.js
+2025-12-24 08:58:34,727 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 290, Duration: 0ms
+2025-12-24 08:58:34,897 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 170ms
+2025-12-24 08:58:35,055 - Knowledge - INFO - Progress: 77.8% | Files: 14/18 | Rate: 0.35 files/sec | Queue: 0
+2025-12-24 08:58:35,977 - Knowledge - INFO - [LLM_CALL] Completed: game_manager.js:chunk1, Duration: 5699ms, PromptTokens: 4514, CompletionTokens: 925, Cost: $0.00082
+2025-12-24 08:58:36,140 - Knowledge - INFO - done ingest for /app/data/T0015/301621/b64991i/Word_game_2048/js/game_manager.js
+2025-12-24 08:58:36,316 - Knowledge - INFO - Processing batch of 4 files
+2025-12-24 08:58:36,506 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/classlist_polyfill.js
+2025-12-24 08:58:36,686 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/index.html
+2025-12-24 08:58:36,843 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/game_manager.js
+2025-12-24 08:58:37,021 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/301621/b64991i/Word_game_2048/js/application.js
+2025-12-24 08:58:37,457 - Knowledge - INFO - Knowledge creation complete
+2025-12-24 08:58:37,609 - Knowledge - INFO - ==================================================
+2025-12-24 08:58:37,795 - Knowledge - INFO - KNOWLEDGE GRAPH GENERATION PERFORMANCE SUMMARY
+2025-12-24 08:58:37,952 - Knowledge - INFO - ==================================================
+2025-12-24 08:58:38,121 - Knowledge - INFO - Total processing time: 42.72 seconds (0.71 minutes)
+2025-12-24 08:58:38,320 - Knowledge - INFO - Files processed: 0
+2025-12-24 08:58:38,516 - Knowledge - INFO - Processing rate: 0.00 files/second
+2025-12-24 08:58:38,671 - Knowledge - INFO - 
+[TIME_BREAKDOWN]
+2025-12-24 08:58:38,841 - Knowledge - INFO - File Reading: 0.00s (0.0%)
+2025-12-24 08:58:38,991 - Knowledge - INFO - LLM Processing: 18.20s (42.6%)
+2025-12-24 08:58:39,188 - Knowledge - INFO - MongoDB Operations: 0.00s (0.0%)
+2025-12-24 08:58:39,369 - Knowledge - INFO - Redis Operations: 0.00s (0.0%)
+2025-12-24 08:58:39,548 - Knowledge - INFO - WebSocket Communication: 1.90s (4.5%)
+2025-12-24 08:58:39,704 - Knowledge - INFO - Other Overhead: 22.61s (52.9%)
+2025-12-24 08:58:39,938 - Knowledge - INFO - 
+[LLM_STATS]
+2025-12-24 08:58:40,117 - Knowledge - INFO - Total LLM calls: 4
+2025-12-24 08:58:40,279 - Knowledge - INFO - Average LLM response time: 4551ms
+2025-12-24 08:58:40,451 - Knowledge - INFO - Average prompt tokens: 3250.5
+2025-12-24 08:58:40,617 - Knowledge - INFO - Average completion tokens: 513.2
+2025-12-24 08:58:40,787 - Knowledge - INFO - Total prompt tokens: 13002
+2025-12-24 08:58:40,982 - Knowledge - INFO - Total completion tokens: 2053
+2025-12-24 08:58:41,140 - Knowledge - INFO - Total LLM cost: $0.0021
+2025-12-24 08:58:41,316 - Knowledge - INFO - 
+[DATABASE_STATS]
+2025-12-24 08:58:41,477 - Knowledge - INFO - MongoDB operations: 0
+2025-12-24 08:58:41,686 - Knowledge - INFO - Redis operations: 0
+2025-12-24 08:58:41,854 - Knowledge - INFO - 
+[COMMUNICATION_STATS]
+2025-12-24 08:58:42,033 - Knowledge - INFO - WebSocket messages sent: 9
+2025-12-24 08:58:42,194 - Knowledge - INFO - Average message size: 131.8 bytes
+2025-12-24 08:58:42,377 - Knowledge - INFO - 
+[WORKER_STATS]
+2025-12-24 08:58:42,594 - Knowledge - INFO - 
+[FILE_TYPE_STATS]
+2025-12-24 08:58:42,765 - Knowledge - INFO - 
+[SLOWEST_FILES]
+2025-12-24 08:58:42,920 - Knowledge - INFO - ==================================================
+2025-12-24 08:58:43,085 - Knowledge - INFO - ==================================================
+2025-12-24 08:58:43,294 - Knowledge - INFO - KNOWLEDGE GRAPH GENERATION PERFORMANCE SUMMARY
+2025-12-24 08:58:43,498 - Knowledge - INFO - ==================================================
+2025-12-24 08:58:43,689 - Knowledge - INFO - Total processing time: 48.24 seconds (0.80 minutes)
+2025-12-24 08:58:43,846 - Knowledge - INFO - Files processed: 18 of 18
+2025-12-24 08:58:44,054 - Knowledge - INFO - Processing rate: 0.37 files/second
+2025-12-24 08:58:44,242 - Knowledge - INFO - WebSocket messages sent: 4
+2025-12-24 08:58:44,386 - Knowledge - INFO - MongoDB operations: 18
+2025-12-24 08:58:44,531 - Knowledge - INFO - Average MongoDB ops per file: 1.00
+2025-12-24 08:58:44,714 - Knowledge - INFO - LLM costs: $0.0021
+2025-12-24 08:58:44,877 - Knowledge - INFO - Prompt tokens: 13002
+2025-12-24 08:58:45,072 - Knowledge - INFO - Completion tokens: 2053
+2025-12-24 08:58:45,290 - Knowledge - INFO - Updating org costs, total cost: 0.0021214
+2025-12-24 08:58:46,458 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 287, Duration: 0ms
+2025-12-24 08:58:46,605 - Knowledge - INFO - Saving knowledge to Redis...
+2025-12-24 08:58:46,789 - Knowledge - INFO - Knowledge saved to Redis successfully
+2025-12-29 05:59:29,993 - Knowledge - INFO - Created shared MongoDB connection pool
+2025-12-29 05:59:29,995 - Knowledge - INFO - Starting Knowledge Graph processing with 20 threads
+2025-12-29 05:59:29,996 - Knowledge - INFO - Initial configuration: chunk_size=65536, max_cache_size=500
+2025-12-29 05:59:29,996 - Knowledge - INFO - Knowledge Graph concurrency configuration: workers=20, max_batch_size=10, max_concurrent_llm_calls=50
+2025-12-29 05:59:30,756 - Knowledge - INFO - 🔍 _load_persisted_knowledge called - checking for Redis optimization
+2025-12-29 05:59:30,761 - Knowledge - WARNING - ❌ load_from_redis method not found - Redis support not attached
+2025-12-29 05:59:30,761 - Knowledge - INFO - load persisted knowledge: begin
+2025-12-29 05:59:30,964 - Knowledge - INFO - Persisted knowledge files in /app/data/T0002/193026/b6082bq/Word_game_2048/.knowledge have been renamed to use .json
+2025-12-29 05:59:30,971 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:30,972 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:30,974 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/local_storage_manager.js
+2025-12-29 05:59:30,978 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:30,978 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:30,980 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/style/main.css
+2025-12-29 05:59:30,983 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:30,984 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:30,986 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/bind_polyfill.js
+2025-12-29 05:59:30,989 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:30,990 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:30,992 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/html_actuator.js
+2025-12-29 05:59:30,996 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:30,997 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:30,999 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/animframe_polyfill.js
+2025-12-29 05:59:31,003 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,006 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,008 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/keyboard_input_manager.js
+2025-12-29 05:59:31,013 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,014 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,016 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/LICENSE.txt
+2025-12-29 05:59:31,020 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,020 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,022 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/style/fonts/clear-sans.css
+2025-12-29 05:59:31,026 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,027 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,029 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/tile.js
+2025-12-29 05:59:31,032 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,033 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,035 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/grid.js
+2025-12-29 05:59:31,039 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,039 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,041 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/README.md
+2025-12-29 05:59:31,044 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,044 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,047 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/style/helpers.scss
+2025-12-29 05:59:31,050 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,050 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,053 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/classlist_polyfill.js
+2025-12-29 05:59:31,057 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,057 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,059 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/index.html
+2025-12-29 05:59:31,063 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,063 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,065 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/game_manager.js
+2025-12-29 05:59:31,068 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,069 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,071 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/application.js
+2025-12-29 05:59:31,075 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,075 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,077 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/CONTRIBUTING.md
+2025-12-29 05:59:31,081 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,081 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,083 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/style/main.scss
+2025-12-29 05:59:31,084 - Knowledge - INFO - Loaded 18 files from persisted knowledge
+2025-12-29 05:59:31,084 - Knowledge - INFO - load persisted knowledge: end
+2025-12-29 05:59:31,092 - Knowledge - INFO - Redis support added with prefix knowledge:b6082bq:
+2025-12-29 05:59:31,135 - Knowledge - INFO - Starting knowledge initialization for ID: daF8tH-b6082bq
+2025-12-29 05:59:31,135 - Knowledge - INFO - 🔍 Checking Redis for build_id: b6082bq
+2025-12-29 05:59:31,136 - Knowledge - INFO - 🔍 Full session ID: daF8tH-b6082bq
+2025-12-29 05:59:31,136 - Knowledge - INFO - 🔍 Redis prefix will be: knowledge:b6082bq:
+2025-12-29 05:59:31,136 - Knowledge - INFO - 🔍 Using attached load_from_redis() method
+2025-12-29 05:59:31,136 - Knowledge - INFO - 🔍 Attempting to load knowledge from Redis...
+2025-12-29 05:59:31,137 - Knowledge - INFO - 🔍 Using derived instance_id for Redis lookup: b6082bq
+2025-12-29 05:59:31,142 - Knowledge - WARNING - ❌ No Redis cache found
+2025-12-29 05:59:31,147 - Knowledge - INFO - 📁 Loading knowledge from disk...
+2025-12-29 05:59:31,205 - Knowledge - INFO - load persisted docinfo: begin
+2025-12-29 05:59:31,208 - Knowledge - INFO - load persisted docinfo: end
+2025-12-29 05:59:31,209 - Knowledge - INFO - 🔍 _load_persisted_knowledge called - checking for Redis optimization
+2025-12-29 05:59:31,209 - Knowledge - INFO - ✅ load_from_redis method found - attempting Redis load
+2025-12-29 05:59:31,209 - Knowledge - INFO - 🔍 Attempting to load knowledge from Redis...
+2025-12-29 05:59:31,210 - Knowledge - INFO - 🔍 Using derived instance_id for Redis lookup: b6082bq
+2025-12-29 05:59:31,216 - Knowledge - WARNING - ❌ No Redis cache found
+2025-12-29 05:59:31,217 - Knowledge - INFO - ❌ Redis load returned False - falling back to file loading
+2025-12-29 05:59:31,217 - Knowledge - INFO - load persisted knowledge: begin
+2025-12-29 05:59:31,221 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,221 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,221 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/local_storage_manager.js
+2025-12-29 05:59:31,223 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,224 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,224 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/style/main.css
+2025-12-29 05:59:31,227 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,227 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,228 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/bind_polyfill.js
+2025-12-29 05:59:31,231 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,231 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,232 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/html_actuator.js
+2025-12-29 05:59:31,236 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,237 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,237 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/animframe_polyfill.js
+2025-12-29 05:59:31,239 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,240 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,240 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/keyboard_input_manager.js
+2025-12-29 05:59:31,242 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,242 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,243 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/LICENSE.txt
+2025-12-29 05:59:31,245 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,245 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,245 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/style/fonts/clear-sans.css
+2025-12-29 05:59:31,248 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,248 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,249 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/tile.js
+2025-12-29 05:59:31,251 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,251 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,253 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/grid.js
+2025-12-29 05:59:31,256 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,256 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,257 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/README.md
+2025-12-29 05:59:31,259 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,259 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,260 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/style/helpers.scss
+2025-12-29 05:59:31,262 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,262 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,262 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/classlist_polyfill.js
+2025-12-29 05:59:31,265 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,265 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,265 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/index.html
+2025-12-29 05:59:31,267 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,268 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,268 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/game_manager.js
+2025-12-29 05:59:31,270 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,270 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,271 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/application.js
+2025-12-29 05:59:31,273 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,274 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,274 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/CONTRIBUTING.md
+2025-12-29 05:59:31,276 - Knowledge - INFO - Found code-base-name: https://github.com/Kishore6753/Word_game_2048.git:master
+2025-12-29 05:59:31,276 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7fa2e8b28c90>
+2025-12-29 05:59:31,277 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/style/main.scss
+2025-12-29 05:59:31,277 - Knowledge - INFO - Loaded 18 files from persisted knowledge
+2025-12-29 05:59:31,277 - Knowledge - INFO - load persisted knowledge: end
+2025-12-29 05:59:31,278 - Knowledge - INFO - 📁 Disk load complete in 0.13s
+2025-12-29 05:59:31,278 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 160, Duration: 0ms
+2025-12-29 05:59:31,279 - Knowledge - INFO - Worker kw1 created using shared MongoDB connection pool
+2025-12-29 05:59:31,280 - Knowledge - INFO - knowledge worker kw1 start
+2025-12-29 05:59:31,280 - Knowledge - INFO - Worker kw2 created using shared MongoDB connection pool
+2025-12-29 05:59:31,281 - Knowledge - INFO - [kw1] Queue=18, InProgress=0, PendingWorkers=0/1, Completed=0/18 (0.0%)
+2025-12-29 05:59:31,283 - Knowledge - INFO - knowledge worker kw2 start
+2025-12-29 05:59:31,284 - Knowledge - INFO - Worker kw3 created using shared MongoDB connection pool
+2025-12-29 05:59:31,284 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=18, active_workers=0/2
+2025-12-29 05:59:31,285 - Knowledge - INFO - knowledge worker kw3 start
+2025-12-29 05:59:31,286 - Knowledge - INFO - [kw2] Queue=18, InProgress=0, PendingWorkers=0/2, Completed=0/18 (0.0%)
+2025-12-29 05:59:31,286 - Knowledge - INFO - Worker kw4 created using shared MongoDB connection pool
+2025-12-29 05:59:31,286 - Knowledge - INFO - Worker kw1 processing /app/data/T0002/193026/b6082bq/Word_game_2048/js/local_storage_manager.js
+2025-12-29 05:59:31,287 - Knowledge - INFO - [kw3] Queue=14, InProgress=0, PendingWorkers=1/3, Completed=0/18 (0.0%)
+2025-12-29 05:59:31,288 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=18, active_workers=1/3
+2025-12-29 05:59:31,288 - Knowledge - INFO - knowledge worker kw4 start
+2025-12-29 05:59:31,289 - Knowledge - INFO - Worker kw5 created using shared MongoDB connection pool
+2025-12-29 05:59:31,289 - Knowledge - INFO - Fast-tracked /app/data/T0002/193026/b6082bq/Word_game_2048/js/local_storage_manager.js (ext=.js, size=1588)
+2025-12-29 05:59:31,289 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=14, active_workers=1/4
+2025-12-29 05:59:31,290 - Knowledge - INFO - Worker kw2 processing /app/data/T0002/193026/b6082bq/Word_game_2048/js/animframe_polyfill.js
+2025-12-29 05:59:31,291 - Knowledge - INFO - [kw4] Queue=10, InProgress=0, PendingWorkers=2/4, Completed=0/18 (0.0%)
+2025-12-29 05:59:31,291 - Knowledge - INFO - knowledge worker kw5 start
+2025-12-29 05:59:31,292 - Knowledge - INFO - Worker kw6 created using shared MongoDB connection pool
+2025-12-29 05:59:31,292 - Knowledge - INFO - Worker kw1 processing /app/data/T0002/193026/b6082bq/Word_game_2048/style/main.css
+2025-12-29 05:59:31,293 - Knowledge - INFO - Worker kw3 processing /app/data/T0002/193026/b6082bq/Word_game_2048/js/tile.js
+2025-12-29 05:59:31,293 - Knowledge - INFO - Fast-tracked /app/data/T0002/193026/b6082bq/Word_game_2048/js/animframe_polyfill.js (ext=.js, size=890)
+2025-12-29 05:59:31,294 - Knowledge - INFO - Batch sizing: calculated=4, max_allowed=10, queue=10, active_workers=3/5
+2025-12-29 05:59:31,295 - Knowledge - INFO - knowledge worker kw6 start
+2025-12-29 05:59:31,296 - Knowledge - INFO - Worker kw7 created using shared MongoDB connection pool
+2025-12-29 05:59:31,296 - Knowledge - INFO - Fast-tracked /app/data/T0002/193026/b6082bq/Word_game_2048/style/main.css (ext=.css, size=20647)
+2025-12-29 05:59:31,297 - Knowledge - INFO - Fast-tracked /app/data/T0002/193026/b6082bq/Word_game_2048/js/tile.js (ext=.js, size=594)
+2025-12-29 05:59:31,297 - Knowledge - INFO - Worker kw2 processing /app/data/T0002/193026/b6082bq/Word_game_2048/js/keyboard_input_manager.js
+2025-12-29 05:59:31,298 - Knowledge - INFO - Worker kw4 processing /app/data/T0002/193026/b6082bq/Word_game_2048/js/classlist_polyfill.js
+2025-12-29 05:59:31,298 - Knowledge - INFO - knowledge worker kw7 start
+2025-12-29 05:59:31,299 - Knowledge - INFO - Worker kw1 processing /app/data/T0002/193026/b6082bq/Word_game_2048/js/bind_polyfill.js
+2025-12-29 05:59:31,299 - Knowledge - INFO - Worker kw8 created using shared MongoDB connection pool
+2025-12-29 05:59:31,299 - Knowledge - INFO - Worker kw3 processing /app/data/T0002/193026/b6082bq/Word_game_2048/js/grid.js
+2025-12-29 05:59:31,300 - Knowledge - INFO - Worker kw2 processing /app/data/T0002/193026/b6082bq/Word_game_2048/LICENSE.txt
+2025-12-29 05:59:31,301 - Knowledge - INFO - Fast-tracked /app/data/T0002/193026/b6082bq/Word_game_2048/js/classlist_polyfill.js (ext=.js, size=1794)
+2025-12-29 05:59:31,302 - Knowledge - INFO - Fast-tracked /app/data/T0002/193026/b6082bq/Word_game_2048/js/bind_polyfill.js (ext=.js, size=220)
+2025-12-29 05:59:31,302 - Knowledge - INFO - knowledge worker kw8 start
+2025-12-29 05:59:31,302 - Knowledge - INFO - Worker kw9 created using shared MongoDB connection pool
+2025-12-29 05:59:31,303 - Knowledge - INFO - Worker kw3 processing /app/data/T0002/193026/b6082bq/Word_game_2048/README.md
+2025-12-29 05:59:31,304 - Knowledge - INFO - Worker kw4 processing /app/data/T0002/193026/b6082bq/Word_game_2048/index.html
+2025-12-29 05:59:31,304 - Knowledge - INFO - Fast-tracked /app/data/T0002/193026/b6082bq/Word_game_2048/LICENSE.txt (ext=.txt, size=1083)
+2025-12-29 05:59:31,304 - Knowledge - INFO - Worker kw1 processing /app/data/T0002/193026/b6082bq/Word_game_2048/js/html_actuator.js
+2025-12-29 05:59:31,305 - Knowledge - INFO - knowledge worker kw9 start
+2025-12-29 05:59:31,306 - Knowledge - INFO - Worker kw10 created using shared MongoDB connection pool
+2025-12-29 05:59:31,306 - Knowledge - INFO - Fast-tracked /app/data/T0002/193026/b6082bq/Word_game_2048/README.md (ext=.md, size=2350)
+2025-12-29 05:59:31,307 - Knowledge - INFO - Worker kw4 processing /app/data/T0002/193026/b6082bq/Word_game_2048/js/game_manager.js
+2025-12-29 05:59:31,307 - Knowledge - INFO - Worker kw2 processing /app/data/T0002/193026/b6082bq/Word_game_2048/style/fonts/clear-sans.css
+2025-12-29 05:59:31,309 - Knowledge - INFO - knowledge worker kw10 start
+2025-12-29 05:59:31,309 - Knowledge - INFO - Worker kw3 processing /app/data/T0002/193026/b6082bq/Word_game_2048/style/helpers.scss
+2025-12-29 05:59:31,309 - Knowledge - INFO - Worker kw11 created using shared MongoDB connection pool
+2025-12-29 05:59:31,310 - Knowledge - INFO - Worker kw4 processing /app/data/T0002/193026/b6082bq/Word_game_2048/js/application.js
+2025-12-29 05:59:31,311 - Knowledge - INFO - Fast-tracked /app/data/T0002/193026/b6082bq/Word_game_2048/style/fonts/clear-sans.css (ext=.css, size=1078)
+2025-12-29 05:59:31,311 - Knowledge - INFO - Fast-tracked /app/data/T0002/193026/b6082bq/Word_game_2048/style/helpers.scss (ext=.scss, size=1679)
+2025-12-29 05:59:31,313 - Knowledge - INFO - knowledge worker kw11 start
+2025-12-29 05:59:31,313 - Knowledge - INFO - Fast-tracked /app/data/T0002/193026/b6082bq/Word_game_2048/js/application.js (ext=.js, size=197)
+2025-12-29 05:59:31,314 - Knowledge - INFO - Worker kw12 created using shared MongoDB connection pool
+2025-12-29 05:59:31,316 - Knowledge - INFO - knowledge worker kw12 start
+2025-12-29 05:59:31,316 - Knowledge - INFO - Worker kw13 created using shared MongoDB connection pool
+2025-12-29 05:59:31,319 - Knowledge - INFO - [kw5] Queue=2, InProgress=0, PendingWorkers=4/12, Completed=0/18 (0.0%)
+2025-12-29 05:59:31,320 - Knowledge - INFO - [kw12] Queue=2, InProgress=0, PendingWorkers=4/12, Completed=0/18 (0.0%)
+2025-12-29 05:59:31,320 - Knowledge - INFO - [kw11] Queue=2, InProgress=0, PendingWorkers=4/12, Completed=0/18 (0.0%)
+2025-12-29 05:59:31,322 - Knowledge - INFO - [kw10] Queue=2, InProgress=0, PendingWorkers=4/12, Completed=0/18 (0.0%)
+2025-12-29 05:59:31,322 - Knowledge - INFO - [kw6] Queue=2, InProgress=0, PendingWorkers=4/12, Completed=0/18 (0.0%)
+2025-12-29 05:59:31,323 - Knowledge - INFO - [kw9] Queue=2, InProgress=0, PendingWorkers=4/12, Completed=0/18 (0.0%)
+2025-12-29 05:59:31,324 - Knowledge - INFO - [kw7] Queue=2, InProgress=0, PendingWorkers=4/12, Completed=0/18 (0.0%)
+2025-12-29 05:59:31,324 - Knowledge - INFO - [kw8] Queue=2, InProgress=0, PendingWorkers=4/12, Completed=0/18 (0.0%)
+2025-12-29 05:59:31,324 - Knowledge - INFO - knowledge worker kw13 start
+2025-12-29 05:59:31,325 - Knowledge - INFO - Batch sizing: calculated=2, max_allowed=10, queue=2, active_workers=4/12
+2025-12-29 05:59:31,325 - Knowledge - INFO - Worker kw14 created using shared MongoDB connection pool
+2025-12-29 05:59:31,326 - Knowledge - INFO - Batch sizing: calculated=2, max_allowed=10, queue=2, active_workers=4/13
+2025-12-29 05:59:31,327 - Knowledge - INFO - Fast-tracked /app/data/T0002/193026/b6082bq/Word_game_2048/js/grid.js (small file (2526 bytes))
+2025-12-29 05:59:31,328 - Knowledge - INFO - Batch sizing: calculated=2, max_allowed=10, queue=2, active_workers=4/13
+2025-12-29 05:59:31,329 - Knowledge - INFO - Batch sizing: calculated=2, max_allowed=10, queue=2, active_workers=4/13
+2025-12-29 05:59:31,330 - Knowledge - INFO - Batch sizing: calculated=2, max_allowed=10, queue=2, active_workers=4/13
+2025-12-29 05:59:31,331 - Knowledge - INFO - Batch sizing: calculated=2, max_allowed=10, queue=2, active_workers=4/13
+2025-12-29 05:59:31,331 - Knowledge - INFO - Batch sizing: calculated=2, max_allowed=10, queue=2, active_workers=4/13
+2025-12-29 05:59:31,332 - Knowledge - INFO - Batch sizing: calculated=2, max_allowed=10, queue=2, active_workers=4/13
+2025-12-29 05:59:31,333 - Knowledge - INFO - [kw13] Queue=2, InProgress=0, PendingWorkers=4/13, Completed=0/18 (0.0%)
+2025-12-29 05:59:31,333 - Knowledge - INFO - Worker kw5 processing /app/data/T0002/193026/b6082bq/Word_game_2048/CONTRIBUTING.md
+2025-12-29 05:59:31,334 - Knowledge - INFO - knowledge worker kw14 start
+2025-12-29 05:59:31,335 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 160, Duration: 0ms
+2025-12-29 05:59:31,335 - Knowledge - INFO - Worker kw15 created using shared MongoDB connection pool
+2025-12-29 05:59:31,423 - Knowledge - INFO - Batch sizing: calculated=2, max_allowed=10, queue=2, active_workers=6/14
+2025-12-29 05:59:31,428 - Knowledge - INFO - Fast-tracked /app/data/T0002/193026/b6082bq/Word_game_2048/CONTRIBUTING.md (ext=.md, size=1970)
+2025-12-29 05:59:31,433 - Knowledge - INFO - knowledge worker kw15 start
+2025-12-29 05:59:31,434 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 99ms
+2025-12-29 05:59:31,461 - Knowledge - INFO - Worker kw16 created using shared MongoDB connection pool
+2025-12-29 05:59:31,466 - Knowledge - INFO - Worker kw5 processing /app/data/T0002/193026/b6082bq/Word_game_2048/style/main.scss
+2025-12-29 05:59:31,468 - Knowledge - INFO - Progress: 0.0% | Files: 1/18 | Rate: 0.72 files/sec | Queue: 0
+2025-12-29 05:59:31,470 - Knowledge - INFO - knowledge worker kw16 start
+2025-12-29 05:59:31,474 - Knowledge - INFO - Worker kw17 created using shared MongoDB connection pool
+2025-12-29 05:59:31,480 - Knowledge - INFO - Fast-tracked /app/data/T0002/193026/b6082bq/Word_game_2048/style/main.scss (ext=.scss, size=10404)
+2025-12-29 05:59:31,488 - Knowledge - INFO - knowledge worker kw17 start
+2025-12-29 05:59:31,489 - Knowledge - INFO - Worker kw18 created using shared MongoDB connection pool
+2025-12-29 05:59:31,494 - Knowledge - INFO - knowledge worker kw18 start
+2025-12-29 05:59:31,503 - Knowledge - INFO - Processing batch of 2 files
+2025-12-29 05:59:31,503 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/CONTRIBUTING.md
+2025-12-29 05:59:31,516 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/style/main.scss
+2025-12-29 05:59:31,703 - Knowledge - INFO - Processing batch of 4 files
+2025-12-29 05:59:31,704 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/tile.js
+2025-12-29 05:59:32,096 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/grid.js
+2025-12-29 05:59:32,103 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/README.md
+2025-12-29 05:59:32,108 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/style/helpers.scss
+2025-12-29 05:59:33,186 - Knowledge - INFO - [LLM_CALL] Completed: index.html:chunk1, Duration: 1865ms, PromptTokens: 2998, CompletionTokens: 59, Cost: $0.00032
+2025-12-29 05:59:33,211 - Knowledge - INFO - done ingest for /app/data/T0002/193026/b6082bq/Word_game_2048/index.html
+2025-12-29 05:59:35,552 - Knowledge - INFO - [LLM_CALL] Completed: keyboard_input_manager.js:chunk1, Duration: 4224ms, PromptTokens: 2876, CompletionTokens: 430, Cost: $0.00046
+2025-12-29 05:59:35,562 - Knowledge - INFO - done ingest for /app/data/T0002/193026/b6082bq/Word_game_2048/js/keyboard_input_manager.js
+2025-12-29 05:59:36,384 - Knowledge - INFO - Processing batch of 4 files
+2025-12-29 05:59:36,394 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/animframe_polyfill.js
+2025-12-29 05:59:36,772 - Knowledge - INFO - [LLM_CALL] Completed: html_actuator.js:chunk1, Duration: 5443ms, PromptTokens: 2620, CompletionTokens: 665, Cost: $0.00053
+2025-12-29 05:59:36,782 - Knowledge - INFO - done ingest for /app/data/T0002/193026/b6082bq/Word_game_2048/js/html_actuator.js
+2025-12-29 05:59:36,788 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/keyboard_input_manager.js
+2025-12-29 05:59:36,938 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/LICENSE.txt
+2025-12-29 05:59:36,940 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/style/fonts/clear-sans.css
+2025-12-29 05:59:37,616 - Knowledge - INFO - [LLM_CALL] Completed: game_manager.js:chunk1, Duration: 6183ms, PromptTokens: 4516, CompletionTokens: 1027, Cost: $0.00086
+2025-12-29 05:59:37,617 - Knowledge - INFO - done ingest for /app/data/T0002/193026/b6082bq/Word_game_2048/js/game_manager.js
+2025-12-29 05:59:37,666 - Knowledge - INFO - Processing batch of 4 files
+2025-12-29 05:59:37,666 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/local_storage_manager.js
+2025-12-29 05:59:37,670 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/style/main.css
+2025-12-29 05:59:37,675 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/bind_polyfill.js
+2025-12-29 05:59:37,677 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/html_actuator.js
+2025-12-29 05:59:37,744 - Knowledge - INFO - Processing batch of 4 files
+2025-12-29 05:59:37,745 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/classlist_polyfill.js
+2025-12-29 05:59:37,916 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/index.html
+2025-12-29 05:59:38,032 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/game_manager.js
+2025-12-29 05:59:38,098 - Knowledge - INFO - process ingested knowledge for /app/data/T0002/193026/b6082bq/Word_game_2048/js/application.js
+2025-12-29 05:59:38,100 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 244, Duration: 0ms
+2025-12-29 05:59:38,101 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 1ms
+2025-12-29 05:59:38,101 - Knowledge - INFO - Progress: 100.0% | Files: 18/18 | Rate: 2.22 files/sec | Queue: 0
+2025-12-29 05:59:38,439 - Knowledge - INFO - Knowledge creation complete
+2025-12-29 05:59:38,439 - Knowledge - INFO - ==================================================
+2025-12-29 05:59:38,439 - Knowledge - INFO - KNOWLEDGE GRAPH GENERATION PERFORMANCE SUMMARY
+2025-12-29 05:59:38,440 - Knowledge - INFO - ==================================================
+2025-12-29 05:59:38,440 - Knowledge - INFO - Total processing time: 8.45 seconds (0.14 minutes)
+2025-12-29 05:59:38,440 - Knowledge - INFO - Files processed: 0
+2025-12-29 05:59:38,441 - Knowledge - INFO - Processing rate: 0.00 files/second
+2025-12-29 05:59:38,441 - Knowledge - INFO - 
+[TIME_BREAKDOWN]
+2025-12-29 05:59:38,441 - Knowledge - INFO - File Reading: 0.00s (0.0%)
+2025-12-29 05:59:38,442 - Knowledge - INFO - LLM Processing: 17.71s (209.7%)
+2025-12-29 05:59:38,442 - Knowledge - INFO - MongoDB Operations: 0.00s (0.0%)
+2025-12-29 05:59:38,442 - Knowledge - INFO - Redis Operations: 0.00s (0.0%)
+2025-12-29 05:59:38,443 - Knowledge - INFO - WebSocket Communication: 0.10s (1.2%)
+2025-12-29 05:59:38,443 - Knowledge - INFO - 
+[LLM_STATS]
+2025-12-29 05:59:38,444 - Knowledge - INFO - Total LLM calls: 4
+2025-12-29 05:59:38,444 - Knowledge - INFO - Average LLM response time: 4429ms
+2025-12-29 05:59:38,444 - Knowledge - INFO - Average prompt tokens: 3252.5
+2025-12-29 05:59:38,445 - Knowledge - INFO - Average completion tokens: 545.2
+2025-12-29 05:59:38,445 - Knowledge - INFO - Total prompt tokens: 13010
+2025-12-29 05:59:38,445 - Knowledge - INFO - Total completion tokens: 2181
+2025-12-29 05:59:38,446 - Knowledge - INFO - Total LLM cost: $0.0022
+2025-12-29 05:59:38,446 - Knowledge - INFO - 
+[DATABASE_STATS]
+2025-12-29 05:59:38,446 - Knowledge - INFO - MongoDB operations: 0
+2025-12-29 05:59:38,461 - Knowledge - INFO - Redis operations: 0
+2025-12-29 05:59:38,462 - Knowledge - INFO - 
+[COMMUNICATION_STATS]
+2025-12-29 05:59:38,462 - Knowledge - INFO - WebSocket messages sent: 5
+2025-12-29 05:59:38,462 - Knowledge - INFO - Average message size: 112.8 bytes
+2025-12-29 05:59:38,462 - Knowledge - INFO - 
+[WORKER_STATS]
+2025-12-29 05:59:38,462 - Knowledge - INFO - 
+[FILE_TYPE_STATS]
+2025-12-29 05:59:38,463 - Knowledge - INFO - 
+[SLOWEST_FILES]
+2025-12-29 05:59:38,463 - Knowledge - INFO - ==================================================
+2025-12-29 05:59:38,463 - Knowledge - INFO - ==================================================
+2025-12-29 05:59:38,463 - Knowledge - INFO - KNOWLEDGE GRAPH GENERATION PERFORMANCE SUMMARY
+2025-12-29 05:59:38,463 - Knowledge - INFO - ==================================================
+2025-12-29 05:59:38,464 - Knowledge - INFO - Total processing time: 8.53 seconds (0.14 minutes)
+2025-12-29 05:59:38,464 - Knowledge - INFO - Files processed: 18 of 18
+2025-12-29 05:59:38,464 - Knowledge - INFO - Processing rate: 2.11 files/second
+2025-12-29 05:59:38,464 - Knowledge - INFO - WebSocket messages sent: 2
+2025-12-29 05:59:38,464 - Knowledge - INFO - MongoDB operations: 18
+2025-12-29 05:59:38,465 - Knowledge - INFO - Average MongoDB ops per file: 1.00
+2025-12-29 05:59:38,465 - Knowledge - INFO - LLM costs: $0.0022
+2025-12-29 05:59:38,465 - Knowledge - INFO - Prompt tokens: 13010
+2025-12-29 05:59:38,466 - Knowledge - INFO - Completion tokens: 2181
+2025-12-29 05:59:38,466 - Knowledge - INFO - Updating org costs, total cost: 0.0021734
+2025-12-29 05:59:38,469 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 242, Duration: 0ms
+2025-12-29 05:59:38,935 - Knowledge - INFO - Saving knowledge to Redis...
+2025-12-29 05:59:38,945 - Knowledge - INFO - Knowledge saved to Redis successfully
