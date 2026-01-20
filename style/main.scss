@@ -461,11 +461,82 @@ hr {
   margin-bottom: 0;
 }
 
+.game-controls {
+  float: right;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
 .restart-button {
   @include button;
   display: block;
   text-align: center;
-  float: right;
+}
+
+// Theme toggle uses <button> for accessibility, but matches link-button styling.
+.theme-toggle-button {
+  @include button;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+// -------------------------
+// Dark theme overrides
+// -------------------------
+// Implemented via a class on <html> to avoid needing to rework existing styles.
+html.dark-theme, html.dark-theme body {
+  background: #121212;
+  color: #e6e1dc;
+}
+
+html.dark-theme a {
+  color: #e6e1dc;
+}
+
+html.dark-theme hr {
+  border-bottom-color: rgba(230, 225, 220, 0.25);
+}
+
+html.dark-theme .score-container,
+html.dark-theme .best-container {
+  background: #2b2b2b;
+  color: #f9f6f2;
+
+  &:after {
+    color: rgba(249, 246, 242, 0.75);
+  }
+
+  .score-addition {
+    color: rgba(249, 246, 242, 0.85);
+  }
+}
+
+html.dark-theme .game-container {
+  background: #2a2a2a;
+}
+
+html.dark-theme .grid-cell {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+html.dark-theme .game-container .game-message {
+  background: rgba(18, 18, 18, 0.65);
+}
+
+html.dark-theme .game-container .game-message a,
+html.dark-theme .restart-button,
+html.dark-theme .theme-toggle-button {
+  background: #3a3a3a;
+  color: #f9f6f2;
+}
+
+html.dark-theme .tile.tile-2 .tile-inner,
+html.dark-theme .tile.tile-4 .tile-inner {
+  // Keep low tiles readable on dark background.
+  background: #3a342e;
+  color: #f9f6f2;
 }
 
 .game-explanation {
@@ -518,12 +589,24 @@ hr {
     line-height: 1.65;
   }
 
-  .restart-button {
+  .game-controls {
     width: 42%;
+    display: block;
+    float: right;
+  }
+
+  .restart-button,
+  .theme-toggle-button {
+    width: 100%;
     padding: 0;
     display: block;
     box-sizing: border-box;
     margin-top: 2px;
+  }
+
+  .theme-toggle-button {
+    // Add a little space between the stacked buttons on mobile.
+    margin-top: 8px;
   }
 
   // Render the game field at the right width
